@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Looking for work or staff in hospitality? Let Flok Jobs know you're interested and we'll be in touch.">
+
+  <link rel="canonical" href="https://flokjobs.com/interested">
+
+  <!-- OG: use recognised type -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://flokjobs.com/interested">
+  <meta property="og:title"       content="Interested in Flok Jobs?">
+  <meta property="og:description" content="Looking for work or staff in hospitality? Register your interest.">
+
+  <meta name="twitter:title"       content="Interested in Flok Jobs?">
+  <meta name="twitter:description" content="Looking for work or staff in hospitality? Register your interest.">
+
+  <title>Interested - Flok Jobs</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon"><!-- root-relative path -->
+  <link rel="stylesheet" href="../styles/interested.css">
+</head>
+
+<body>
+  <!-- Fixed Header Navigation -->
+  <header class="sticky-header">
+    <div class="header-content">
+      <!-- Logo -->
+      <img src="../images/floklogo.png" class="header-logo" alt="Flok Logo">
+
+      <!-- Mobile Action Buttons -->
+      <div class="header-buttons">
+        <button class="header-btn work-btn" onclick="window.location.href='https://tally.so/r/3X6aYd'">I'm looking<br>for work</button>
+        <button class="header-btn staff-btn" onclick="window.location.href='https://tally.so/r/m66o5B'">I'm looking<br>for staff</button>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="home.html" class="nav-btn">Home</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="blog.html" class="nav-btn">Blog</a>
+        <a href="https://tally.so/r/mKrEN8" class="nav-btn">Contact Us</a>
+        <a href="interested.html" class="nav-btn cta">Interested?</a>
+        <a href="login.html" class="desktop-link login-link">Login</a>
+      </nav>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger-menu" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Overlay Menu -->
+      <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true">
+        <div class="overlay-content">
+          <div class="overlay-header">
+            <div class="logo-wrapper">
+              <img src="../images/floklogo.png" class="overlay-logo" alt="Flok Logo">
+            </div>
+          </div>
+          <nav class="overlay-nav" aria-label="Mobile navigation">
+            <a class="overlay-link" href="home.html">Home</a>
+            <a class="overlay-link" href="about.html">About</a>
+            <a class="overlay-link" href="blog.html">Blog</a>
+            <a class="overlay-link" href="https://tally.so/r/mKrEN8">Contact Us</a>
+            <a class="overlay-link interested" href="interested.html">Interested?</a>
+          </nav>
+          <div class="overlay-login-wrapper">
+            <a class="overlay-login" href="login.html">Login</a>
+          </div>
+
+          <button id="closeOverlay" class="close-btn" aria-label="Close menu">
+            <div class="circle-arrow">
+              <img src="../images/arrow.png" class="arrow" alt="Back arrow">
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="main-section">
+    <div class="content">
+      <h1>What are you looking for?</h1>
+      <div class="button-container">
+        <button class="choice-btn" onclick="window.location.href='https://tally.so/r/3X6aYd'">I am looking for work</button>
+        <button class="choice-btn" onclick="window.location.href='https://tally.so/r/m66o5B'">I am looking for staff</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-columns">
+      <!-- Left Column: Policy Links -->
+      <div class="footer-column footer-left">
+        <h3 class="footer-heading">Info</h3>
+        <ul class="footer-links">
+          <li><a href="../policies/Environmental Policy.pdf" target="_blank">Environment Policy</a></li>
+          <li><a href="../policies/Privacy Policy.pdf" target="_blank">Privacy Policy</a></li>
+          <li><a href="../policies/Equal Opportunities Policy.pdf" target="_blank">Equal Opportunities Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Right Column: Social Links -->
+      <div class="footer-column footer-right">
+        <h3 class="footer-heading">Connect on Social</h3>
+        <ul class="social-links">
+          <li>
+            <img src="../images/facebooklogo.png" alt="Facebook Logo" class="social-icon" />
+            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank">@FlokJobs</a>
+          </li>
+          <li>
+            <img src="../images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" />
+            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank">@FlokJobs</a>
+          </li>
+          <li>
+            <img src="../images/instagramlogo.png" alt="Instagram Logo" class="social-icon" />
+            <a href="https://www.instagram.com/flokjobs/" target="_blank">@FlokJobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p class="copyright">© 2025 Flok</p>
+      <img src="../images/floklogo.png" alt="Flok Logo" class="footer-logo">
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile overlay menu toggle
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const overlay = document.getElementById('mobileOverlay');
+    const closeBtn = document.getElementById('closeOverlay');
+    const body = document.body;
+
+    function openMenu() {
+      overlay.classList.add('open');
+      body.classList.add('menu-open'); // Add class to prevent body scroll
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('open');
+      body.classList.remove('menu-open'); // Remove class to restore body scroll
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+
+    mobileToggle.addEventListener('click', openMenu);
+    mobileToggle.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') openMenu();
+    });
+    closeBtn.addEventListener('click', closeMenu);
+
+    // Close menu when resizing to desktop width
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && overlay.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+  </script>
+
+</body>
+</html>
