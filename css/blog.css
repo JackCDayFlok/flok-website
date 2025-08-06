@@ -472,6 +472,7 @@ a {
     list-style: none;
     padding: 0;
     margin-bottom: 1rem;
+
 }
 
 .footer-links li {
@@ -538,6 +539,7 @@ a {
     font-size: 0.9rem;
     margin: 0;
     align-self: flex-end;
+    font-family: 'Poppins'
 }
 
 /* ==========================================================================
@@ -618,7 +620,7 @@ a {
 
     .footer-column {
     box-sizing: border-box;
-    padding: 0 2rem;
+    padding: 0 0;
     text-align: center;
     font-size: 2rem;
     }
@@ -632,6 +634,7 @@ a {
     height: 100%;
     background-color: white;
     opacity: 1;
+    margin: 0 0;
     }
 
     .footer-heading {
@@ -646,6 +649,9 @@ a {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-left: -1.5rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
     }
 
     .footer-links li {
@@ -656,6 +662,10 @@ a {
     .footer-links a {
     font-size: 1rem;
     }
+
+    .footer-left {
+    padding-left: 4rem;
+  }
 
     .footer-left .footer-links a {
     font-size: 1.2rem;

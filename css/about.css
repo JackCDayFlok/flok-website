@@ -181,6 +181,7 @@ a {
 
 .mobile-overlay {
     position: fixed;
+    overscroll-behavior: contain;
     inset: 0;
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     display: flex;
@@ -423,7 +424,7 @@ p {
 ul {
     margin-left: -1.5rem;
     font-size: 1.1rem;
-    line-height: 1.6;
+
 }
 
 .founder-section {
@@ -441,9 +442,10 @@ position: relative;
 
 .founder-image-mobile {
 float: right;
-margin-left: 0.5rem;
+margin-left: 1rem;
 text-align: center;
 clear: right;
+margin-right: -0.5rem;
 }
 
 .founder-image-mobile img {
@@ -459,8 +461,8 @@ clear: right;
     background-size: contain;
     pointer-events: none;
     z-index: -1;
-    top: -19px;
-    right: -18px;
+    top: -18px;
+    right: -20px;
     width: 195px;
     height: 230px;
 }
@@ -604,6 +606,7 @@ font-weight: 700;
     list-style: none;
     padding: 0;
     margin-bottom: 1rem;
+    
 }
 
 .footer-links li {
@@ -670,6 +673,7 @@ font-weight: 700;
     font-size: 0.9rem;
     margin: 0;
     align-self: flex-end;
+    font-family: 'Poppins'
 }
 
 /* ==========================================================================
@@ -723,6 +727,10 @@ font-weight: 700;
     .founder-caption {
         font-size: 1.4rem !important;
         margin-top: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.7rem;
     }
 
     .tagline::before {
@@ -836,20 +844,21 @@ font-weight: 700;
 
     .footer-column {
     box-sizing: border-box;
-    padding: 0 2rem;
+    padding: 0 0;
     text-align: center;
     font-size: 2rem;
     }
 
     .footer-divider {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 100%;
-    background-color: white;
-    opacity: 1;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: white;
+        opacity: 1;
+        margin: 0 0;
     }
 
     .footer-heading {
@@ -864,6 +873,9 @@ font-weight: 700;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-left: -1.5rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
     }
 
     .footer-links li {
@@ -874,6 +886,10 @@ font-weight: 700;
     .footer-links a {
     font-size: 1rem;
     }
+
+    .footer-left {
+    padding-left: 4rem;
+  }
 
     .footer-left .footer-links a {
     font-size: 1.2rem;
