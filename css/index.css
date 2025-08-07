@@ -433,7 +433,7 @@ h1 {
   background-size: cover;
   position: relative;
   min-height: 77rem;
-  margin-top: -10rem;
+  margin-top: -11.5rem;
   z-index: 10;
 }
 
@@ -466,10 +466,7 @@ h1 {
 
 /* How It Works Section */
 .how-it-works-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   background: transparent;
   padding: 11rem 1.5rem;
   color: #000;
