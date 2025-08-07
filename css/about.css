@@ -181,7 +181,6 @@ a {
 
 .mobile-overlay {
     position: fixed;
-    overscroll-behavior: contain;
     inset: 0;
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     display: flex;

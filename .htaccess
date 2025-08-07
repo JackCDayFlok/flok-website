@@ -1,0 +1,12 @@
+# ─── Remove .html from URLs ───────────────────────────────────────────
+RewriteEngine On
+
+# Skip processing if the request already points at a real file or folder
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# If /something has a matching /something.html file,
+# serve it transparently
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
