@@ -2,13 +2,48 @@
 <html lang="en">
 
 <head>
+  <!-- ——————————————— CORE ——————————————— -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="Log in to your Flok Jobs account.">
+  <meta name="description"
+        content="Log in to your Flok Jobs account.">
 
+  <!-- Absolute canonical -->
   <link rel="canonical" href="https://www.flokjobs.com/login">
 
+  <!-- ———————————  STRUCTURED DATA  ——————————— -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Flok Jobs",
+    "url":"https://www.flokjobs.com",
+    "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
+    "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
+    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
+    "address":{"@type":"PostalAddress","addressCountry":"GB"}
+  }</script>
+
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://www.flokjobs.com",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.flokjobs.com/search?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }</script>
+  
+  <!-- ———————————  PWA / THEME  ——————————— -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Flok Jobs">
+  <meta name="theme-color" content="#121212">
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+  <!-- —————————————————  ASSETS  ————————————————— -->
   <title>Log in - Flok Jobs</title>
   <link rel="icon" href="images/favicon.png" type="image/x-icon"><!-- root-relative path -->
   <link rel="stylesheet" href="css/login.css">

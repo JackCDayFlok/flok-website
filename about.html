@@ -2,26 +2,75 @@
 <html lang="en">
 
 <head>
+  <!-- ——————————————— CORE ——————————————— -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
   <meta name="description"
-        content="Flok Jobs is a UK-based hiring platform built for hospitality. We connect verified candidates with venues that need flexible, reliable staff in real time."><!-- shorter -->
+        content="Flok Jobs is a UK-based hiring platform built for hospitality. We connect verified candidates with venues that need flexible, reliable staff in real time.">
 
+  <!-- Absolute canonical -->
   <link rel="canonical" href="https://www.flokjobs.com/about">
 
-  <!-- social -->
+  <!-- ——————————— SOCIAL CARDS ——————————— -->
+  <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.flokjobs.com/about">
   <meta property="og:title"       content="About Flok Jobs">
   <meta property="og:description" content="Learn how Flok Jobs is reinventing hospitality recruitment in the UK.">
+  <meta property="og:image"       content="https://www.flokjobs.com/images/og-home.png">
+  <meta property="og:locale"      content="en_GB">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
+  <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="About Flok Jobs">
   <meta name="twitter:description" content="Learn how Flok Jobs is reinventing hospitality recruitment in the UK.">
+  <meta name="twitter:image"       content="https://www.flokjobs.com/images/og-home.png">
 
-  <!-- STRUCTURED DATA -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About Flok Jobs","url":"https://www.flokjobs.com/about","logo":"https://www.flokjobs.com/images/flokjobs-logo.png","description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.","sameAs":["https://flokjobs.co.uk","https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],"address":{"@type":"PostalAddress","addressCountry":"GB"}}</script>
+  <!-- ———————————  STRUCTURED DATA  ——————————— -->
 
-  <!-- assets -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Flok Jobs",
+    "url":"https://www.flokjobs.com",
+    "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
+    "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
+    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
+    "address":{"@type":"PostalAddress","addressCountry":"GB"}
+  }</script>
+
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "url":"https://www.flokjobs.com",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.flokjobs.com/search?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }</script>
+
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"AboutPage",
+    "name":"About Flok Jobs",
+    "url":"https://www.flokjobs.com/about",
+    "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
+    "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
+    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
+    "address":{"@type":"PostalAddress","addressCountry":"GB"}
+  }</script>
+
+  <!-- ———————————  PWA / THEME  ——————————— -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Flok Jobs">
+  <meta name="theme-color" content="#121212">
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+  <!-- —————————————————  ASSETS  ————————————————— -->
   <title>About - Flok Jobs</title>
   <link rel="icon" href="images/favicon.png" type="image/x-icon"><!-- root-relative path -->
   <link rel="stylesheet" href="css/about.css">
