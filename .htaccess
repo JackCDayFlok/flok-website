@@ -1,5 +1,30 @@
-# ─── Remove .html from URLs ───────────────────────────────────────────
+# Block access to hidden dotfiles
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+# Apache 2.2 fallback
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
+# Block common backup/config dumps
+<FilesMatch "(~$|\.bak$|\.old$|\.swp$|\.ini$|\.env$|\.log$|\.sql$)">
+  Require all denied
+</FilesMatch>
+
+# Disable directory listings
+Options -Indexes
+
 RewriteEngine On
+# Rewrite fallback (returns 403 for any dotfile)
+RewriteRule "(^|/)\." - [F]
+
+# Remove .html from URLs
 
 # Skip processing if the request already points at a real file or folder
 RewriteCond %{REQUEST_FILENAME} -f [OR]
