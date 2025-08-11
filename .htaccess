@@ -1,10 +1,17 @@
-# Block access to hidden dotfiles
+# ---------- Block access to dotfiles (except /.well-known) ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} !^/\.well-known/ [NC]
+  RewriteRule (^|/)\. - [F,L]
+</IfModule>
+
+# ---------- Block access to hidden dotfiles using FilesMatch ----------
 <IfModule mod_authz_core.c>
   <FilesMatch "^\.">
     Require all denied
   </FilesMatch>
 </IfModule>
-# Apache 2.2 fallback
+
 <IfModule !mod_authz_core.c>
   <FilesMatch "^\.">
     Order allow,deny
@@ -12,26 +19,47 @@
   </FilesMatch>
 </IfModule>
 
-# Block common backup/config dumps
+# ---------- Block common backup/config dumps ----------
 <FilesMatch "(~$|\.bak$|\.old$|\.swp$|\.ini$|\.env$|\.log$|\.sql$)">
   Require all denied
 </FilesMatch>
 
-# Disable directory listings
+# ---------- Disable directory listings ----------
 Options -Indexes
 
-RewriteEngine On
-# Rewrite fallback (returns 403 for any dotfile)
-RewriteRule "(^|/)\." - [F]
-
-# Remove .html from URLs
-
+# ---------- Redirect .html extensions to URL without extension ----------
 # Skip processing if the request already points at a real file or folder
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# If /something has a matching /something.html file,
-# serve it transparently
+# If /something has a matching /something.html file, serve it transparently
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
+
+# ---------- Force HTTPS (if not already redirected) ----------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---------- Rewrite URL to remove .html from URLs ----------
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ /$1 [R=301,L]
+
+# ---------- Block access to .htaccess file ----------
+<Files ".htaccess">
+  Require all denied
+</Files>
+
+# ---------- Block access to .git directories (if applicable) ----------
+<IfModule mod_rewrite.c>
+  RewriteRule ^\.git/ - [F,L]
+</IfModule>
+
+# ---------- Block access to sensitive file types ----------
+<FilesMatch "(^|/)\.(ht|git|env|bak|swp|ini|log)">
+  Require all denied
+</FilesMatch>
+
+# ---------- Disable directory listings for security reasons ----------
+Options -Indexes
