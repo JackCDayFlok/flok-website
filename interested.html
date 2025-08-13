@@ -7,25 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
   <meta name="description"
-        content="Looking for work or staff in hospitality? Let Flok Jobs know you're interested and we'll be in touch.">
-  
-  <!-- Absolute canonical -->
+    content="Looking for work or staff in hospitality? Let Flok Jobs know you're interested and we'll be in touch.">
+
+  <!-- ——————————— ABSOLUTE CANONICAL ——————————— -->
   <link rel="canonical" href="https://www.flokjobs.com/interested">
 
   <!-- ——————————— SOCIAL CARDS ——————————— -->
-  <meta property="og:type"         content="website">
-  <meta property="og:url"          content="https://www.flokjobs.com/interested">
-  <meta property="og:title"        content="Interested in Flok Jobs?">
-  <meta property="og:description"  content="Looking for work or staff in hospitality? Register your interest.">
-  <meta property="og:image"        content="https://www.flokjobs.com/images/og-home.png">
-  <meta property="og:locale"       content="en_GB">
-  <meta property="og:image:width"  content="1200">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.flokjobs.com/interested">
+  <meta property="og:title" content="Interested in Flok Jobs?">
+  <meta property="og:site_name" content="Flok Jobs">
+  <meta property="og:description" content="Looking for work or staff in hospitality? Register your interest.">
+  <meta property="og:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Interested in Flok Jobs?">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interested in Flok Jobs?">
   <meta name="twitter:description" content="Looking for work or staff in hospitality? Register your interest.">
-  <meta name="twitter:image"       content="https://www.flokjobs.com/images/og-home.png">
+  <meta name="twitter:image" content="https://www.flokjobs.com/images/og-home.png">
 
   <!-- ———————————  STRUCTURED DATA  ——————————— -->
   <script type="application/ld+json">{
@@ -58,23 +59,34 @@
   <meta name="theme-color" content="#121212">
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
+  <!-- ———————————  PRELOADING ——————————— -->
+  <link rel="preload" href="/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- —————————————————  ASSETS  ————————————————— -->
   <title>Interested - Flok Jobs</title>
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/interested.css">
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <!-- Fixed Header Navigation -->
   <header class="sticky-header">
     <div class="header-content">
       <!-- Logo -->
-      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo"></a>
+      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo" width="960" height="450"></a>
 
       <!-- Mobile Action Buttons -->
       <div class="header-buttons">
-        <button class="header-btn work-btn" onclick="window.open('https://tally.so/r/3X6aYd', '_blank', 'noopener,noreferrer')">I'm looking<br>for work</button>
-        <button class="header-btn staff-btn" onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I'm looking<br>for staff</button>
+        <button class="header-btn work-btn"
+          onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I'm looking<br>for
+          work</button>
+        <button class="header-btn staff-btn"
+          onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I'm looking<br>for
+          staff</button>
       </div>
 
       <!-- Desktop Navigation -->
@@ -82,40 +94,41 @@
         <a href="/" class="nav-btn">Home</a>
         <a href="/about" class="nav-btn">About</a>
         <a href="/blog" class="nav-btn">Blog</a>
-        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank">Contact Us</a>
-        <a href="/interested" class="nav-btn cta">Interested?</a>
+        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        <a href="/interested" class="nav-btn cta" aria-current="page">Interested?</a>
         <a href="/login" class="desktop-link login-link">Login</a>
       </nav>
 
       <!-- Mobile Hamburger Menu -->
-      <div class="hamburger-menu" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <button id="mobileMenuToggle" class="hamburger-menu" aria-label="Open menu" aria-controls="mobileOverlay"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
       <!-- Mobile Overlay Menu -->
       <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true">
         <div class="overlay-content">
           <div class="overlay-header">
             <div class="logo-wrapper">
-              <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo"></a>
+              <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo" width="960"
+                  height="450"></a>
             </div>
           </div>
           <nav class="overlay-nav" aria-label="Mobile navigation">
             <a class="overlay-link" href="/">Home</a>
             <a class="overlay-link" href="/about">About</a>
             <a class="overlay-link" href="/blog">Blog</a>
-            <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank">Contact Us</a>
-            <a class="overlay-link interested" href="/interested">Interested?</a>
+            <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank" rel="noopener noreferrer">Contact
+              Us</a>
+            <a class="overlay-link interested" href="/interested" aria-current="page">Interested?</a>
           </nav>
           <div class="overlay-login-wrapper">
-            <a class="overlay-login" href="/">Login</a>
+            <a class="overlay-login" href="/login">Login</a>
           </div>
 
           <button id="closeOverlay" class="close-btn" aria-label="Close menu">
             <div class="circle-arrow">
-              <img src="images/arrow.png" class="arrow" alt="Back arrow">
+              <img src="images/arrow.png" class="arrow" alt="Back arrow" width="50" height="50">
             </div>
           </button>
         </div>
@@ -124,12 +137,14 @@
   </header>
 
   <!-- Main Content Section -->
-  <section class="main-section">
+  <section class="main-section" id="main-content" role="main" tabindex="-1">
     <div class="content">
       <h1>What are you looking for?</h1>
       <div class="button-container">
-        <button class="choice-btn" onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I am looking for work</button>
-        <button class="choice-btn" onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I am looking for staff</button>
+        <button class="choice-btn" onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I
+          am looking for work</button>
+        <button class="choice-btn" onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I
+          am looking for staff</button>
       </div>
     </div>
   </section>
@@ -155,16 +170,17 @@
         <h3 class="footer-heading">Connect on Social</h3>
         <ul class="social-links">
           <li>
-            <img src="images/facebooklogo.png" alt="Facebook Logo" class="social-icon" />
-            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank">@FlokJobs</a>
+            <img src="images/facebooklogo.png" alt="Facebook Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank"
+              rel="noopener noreferrer">@FlokJobs</a>
           </li>
           <li>
-            <img src="images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" />
-            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank">@FlokJobs</a>
+            <img src="images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank" rel="noopener noreferrer">@FlokJobs</a>
           </li>
           <li>
-            <img src="images/instagramlogo.png" alt="Instagram Logo" class="social-icon" />
-            <a href="https://www.instagram.com/flokjobs/" target="_blank">@FlokJobs</a>
+            <img src="images/instagramlogo.png" alt="Instagram Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.instagram.com/flokjobs/" target="_blank" rel="noopener noreferrer">@FlokJobs</a>
           </li>
         </ul>
       </div>
@@ -173,7 +189,7 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom">
       <p class="copyright">© 2025 Flok</p>
-      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo"></a>
+      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo" width="960" height="450"></a>
     </div>
   </footer>
 
@@ -181,4 +197,5 @@
   <script src="js/overlay-menu.js"></script>
 
 </body>
+
 </html>

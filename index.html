@@ -7,25 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
   <meta name="description"
-        content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+    content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
 
-  <!-- Absolute canonical -->
+  <!-- ——————————— ABSOLUTE CANONICAL ——————————— -->
   <link rel="canonical" href="https://www.flokjobs.com/">
 
   <!-- ——————————— SOCIAL CARDS ——————————— -->
-  <meta property="og:type"         content="website">
-  <meta property="og:url"          content="https://www.flokjobs.com/">
-  <meta property="og:title"        content="Flok Jobs - UK Hospitality Hiring Platform">
-  <meta property="og:description"  content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
-  <meta property="og:image"        content="https://www.flokjobs.com/images/og-home.png">
-  <meta property="og:locale"       content="en_GB">
-  <meta property="og:image:width"  content="1200">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.flokjobs.com/">
+  <meta property="og:title" content="Flok Jobs - UK Hospitality Hiring Platform">
+  <meta property="og:site_name" content="Flok Jobs">
+  <meta property="og:description"
+    content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+  <meta property="og:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Flok Jobs - UK Hospitality Hiring Platform">
-  <meta name="twitter:description" content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
-  <meta name="twitter:image"       content="https://www.flokjobs.com/images/og-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flok Jobs - UK Hospitality Hiring Platform">
+  <meta name="twitter:description"
+    content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+  <meta name="twitter:image" content="https://www.flokjobs.com/images/og-home.png">
 
   <!-- ———————————  STRUCTURED DATA  ——————————— -->
   <script type="application/ld+json">{
@@ -58,181 +61,219 @@
   <meta name="theme-color" content="#121212">
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
+  <!-- ———————————  PRELOADING ——————————— -->
+  <link rel="preload" as="image" href="/images/silverbackground1.svg" type="image/svg+xml" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="/images/silverbackground2.svg" type="image/svg+xml" media="(min-width: 768px)">
+
+  <link rel="preload" as="font" href="/fonts/Poppins-Regular.ttf" type="font/ttf" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+
   <!-- —————————————————  ASSETS  ————————————————— -->
   <title>Flok Jobs - UK Hospitality Hiring Platform</title>
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <!-- Fixed Header Navigation -->
   <header class="sticky-header">
     <div class="header-content">
       <!-- Logo -->
-      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo"></a>
+      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo" width="960" height="450"></a>
 
       <!-- Mobile Action Buttons -->
       <div class="header-buttons">
-        <button class="header-btn work-btn" onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I'm looking<br>for work</button>
-        <button class="header-btn staff-btn" onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I'm looking<br>for staff</button>
+        <button class="header-btn work-btn"
+          onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I'm looking<br>for
+          work</button>
+        <button class="header-btn staff-btn"
+          onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I'm looking<br>for
+          staff</button>
       </div>
 
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
-        <a href="/" class="nav-btn active">Home</a>
+        <a href="/" class="nav-btn active" aria-current="page">Home</a>
         <a href="/about" class="nav-btn">About</a>
         <a href="/blog" class="nav-btn">Blog</a>
-        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank">Contact Us</a>
+        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
         <a href="/interested" class="nav-btn cta">Interested?</a>
         <a href="/login" class="desktop-link login-link">Login</a>
       </nav>
 
-  <!-- Mobile Hamburger Menu -->
-  <div class="hamburger-menu" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <!-- Mobile Overlay Menu -->
-  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true">
-    <div class="overlay-content">
-      <div class="overlay-header">
-        <div class="logo-wrapper">
-          <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo"></a>
-        </div>
-      </div>
-      <nav class="overlay-nav" aria-label="Mobile navigation">
-        <a class="overlay-link active" href="/">Home</a>
-        <a class="overlay-link" href="/about">About</a>
-        <a class="overlay-link" href="/blog">Blog</a>
-        <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank">Contact Us</a>
-        <a class="overlay-link interested" href="/interested">Interested?</a>
-      </nav>
-      <div class="overlay-login-wrapper">
-        <a class="overlay-login" href="/login">Login</a>
-      </div>
-
-      <button id="closeOverlay" class="close-btn" aria-label="Close menu">
-        <div class="circle-arrow">
-          <img src="images/arrow.png" class="arrow" alt="Back arrow">
-        </div>
+      <!-- Mobile Hamburger Menu -->
+      <button id="mobileMenuToggle" class="hamburger-menu" aria-label="Open menu" aria-controls="mobileOverlay"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
+
+      <!-- Mobile Overlay Menu -->
+      <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true">
+        <div class="overlay-content">
+          <div class="overlay-header">
+            <div class="logo-wrapper">
+              <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo" width="960"
+                  height="450"></a>
+            </div>
+          </div>
+          <nav class="overlay-nav" aria-label="Mobile navigation">
+            <a class="overlay-link active" href="/" aria-current="page">Home</a>
+            <a class="overlay-link" href="/about">About</a>
+            <a class="overlay-link" href="/blog">Blog</a>
+            <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank" rel="noopener noreferrer">Contact
+              Us</a>
+            <a class="overlay-link interested" href="/interested">Interested?</a>
+          </nav>
+          <div class="overlay-login-wrapper">
+            <a class="overlay-login" href="/login">Login</a>
+          </div>
+
+          <button id="closeOverlay" class="close-btn" aria-label="Close menu">
+            <div class="circle-arrow">
+              <img src="images/arrow.png" class="arrow" alt="Back arrow" width="50" height="50">
+            </div>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-  
+
   </header>
 
-  <!-- Hero Section -->
-  <section class="gradient-box">
-    <div class="content">
-      <div class="content-text">
-        <p class="coming-soon">Coming soon</p>
-        <h1>Skip The Agency.<br><span class="highlight">Find The Flok.</span></h1>
-        <p class="desc">The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time.</p>
-        <p class="desc">Built for hospitality. Backed by real experience. Not your typical job app.</p>
-        <p class="desc">Be the first. <a href="/interested">Sign up now</a> for exclusive early access.</p>
-        <a href="/interested"><button class="signup-button">Sign up</button></a>
-      </div>
-      <div class="content-image">
-        <img src="images/decopeople1.png" alt="An illustration of hospitality workers">
-      </div>
-    </div>
-  </section>
+  <main id="main-content" tabindex="-1">
 
-  <!-- How It Works Section -->
-  <section class="silverbar-wrapper">
-    <div class="how-it-works-section">
+    <!-- Hero Section -->
+    <section class="gradient-box">
       <div class="content">
-        <h2 class="section-title">How does Flok work?</h2>
-        
-        <div class="steps-container">
-          <!-- Step 1: Post -->
-          <div class="step">
-            <div class="step-icon">
-              <img src="images/devices-icon.png" alt="A computer and smartphone" class="icon">
+        <div class="content-text">
+          <p class="coming-soon">Coming soon</p>
+          <h1>Skip The Agency.<br><span class="highlight">Find The Flok.</span></h1>
+          <p class="desc">The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time.
+          </p>
+          <p class="desc">Built for hospitality. Backed by real experience. Not your typical job app.</p>
+          <p class="desc">Be the first. <a href="/interested">Sign up now</a> for exclusive early access.</p>
+          <a class="signup-button" href="/interested" target="_blank" rel="noopener noreferrer">Sign Up</a>
+        </div>
+        <div class="content-image">
+          <picture>
+            <source srcset="images/decopeople1.webp" type="image/webp">
+            <img src="images/decopeople1.png" alt="An illustration of hospitality workers" width="1536" height="449"
+              fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="silverbar-wrapper">
+      <div class="how-it-works-section">
+        <div class="content">
+          <h2 class="section-title">How does Flok work?</h2>
+
+          <div class="steps-container">
+            <!-- Step 1: Post -->
+            <div class="step">
+              <div class="step-icon">
+                <picture>
+                  <source srcset="images/devices-icon.webp" type="image/webp">
+                  <img src="images/devices-icon.png" alt="A computer and smartphone" class="icon" width="631"
+                    height="445" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <h3 class="step-number">1. Post</h3>
+              <p class="step-description">
+                Employers create a shift or position with the role, location and hourly rate.
+                Instantly send it to the Flok community or your favourite go-to workers,
+                all from your phone or computer.
+              </p>
             </div>
-            <h3 class="step-number">1. Post</h3>
-            <p class="step-description">
-              Employers create a shift or position with the role, location and hourly rate. 
-              Instantly send it to the Flok community or your favourite go-to workers, 
-              all from your phone or computer.
-            </p>
-          </div>
-          
-          <!-- Step 2: Hire Fast -->
-          <div class="step">
-            <div class="step-icon">
-              <img src="images/hired-phone-icon.png" alt="A smartphone displaying the text 'Hired'" class="icon">
+
+            <!-- Step 2: Hire Fast -->
+            <div class="step">
+              <div class="step-icon">
+                <picture>
+                  <source srcset="images/hired-phone-icon.webp" type="image/webp">
+                  <img src="images/hired-phone-icon.png" alt="A smartphone displaying the text 'Hired'" class="icon"
+                    width="501" height="501" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <h3 class="step-number">2. Hire Fast</h3>
+              <p class="step-description">
+                Hire from verified candidates and view their profiles, experience and availability.
+                Prefer speed? Let Flok's smart system do the matching for you.
+              </p>
             </div>
-            <h3 class="step-number">2. Hire Fast</h3>
-            <p class="step-description">
-              Hire from verified candidates and view their profiles, experience and availability. 
-              Prefer speed? Let Flok's smart system do the matching for you.
-            </p>
-          </div>
-          
-          <!-- Step 3: Pay Fast -->
-          <div class="step">
-            <div class="step-icon">
-              <img src="images/pay-phone-icon.png" alt="A smartphone displaying the text 'Pay'" class="icon">
+
+            <!-- Step 3: Pay Fast -->
+            <div class="step">
+              <div class="step-icon">
+                <picture>
+                  <source srcset="images/pay-phone-icon.webp" type="image/webp">
+                  <img src="images/pay-phone-icon.png" alt="A smartphone displaying the text 'Pay'" class="icon"
+                    width="290" height="456" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <h3 class="step-number">3. Pay Fast</h3>
+              <p class="step-description">
+                Once the shift is completed, payment is sorted automatically.
+                Flok makes hiring and paying staff seamless, transparent, and stress-free.
+              </p>
             </div>
-            <h3 class="step-number">3. Pay Fast</h3>
-            <p class="step-description">
-              Once the shift is completed, payment is sorted automatically. 
-              Flok makes hiring and paying staff seamless, transparent, and stress-free.
-            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why Flok Exists Section -->
-  <section class="gradient-box-bottom">
-    <div class="content">
-      <h1 class="why-flok-heading" style="text-align: center;">
-        <span class="highlight">Why Flok Exists</span>
-      </h1>
-      
-      <p class="why-flok-text">
-        We've lived the reality of last-minute cover falling through. We've felt the pressure 
-        of unreliable temps, patchy communication and slow, outdated hiring systems.
-      </p>
-      
-      <p class="why-flok-text">
-        We've worked the shifts, led the teams and dealt with agencies that didn't understand 
-        the job or care to.
-      </p>
-      
-      <p class="why-flok-text">Flok is created to change that.</p>
-      
-      <p class="why-flok-text">
-        A smarter, fairer way for hospitality people to find each other — quickly, directly, 
-        and with respect on both sides.
-      </p>
-      
-      <button class="contact-us-button" onclick="window.open('https://tally.so/r/mKrEN8', '_blank', 'noopener,noreferrer')">Contact Us</button>
-      
-      <!-- Founder Quote -->
-      <p class="quote">
-        <i>"Flok is the solution I wish had been available when I was managing kitchens
-          and facing the challenge of sourcing reliable staff on short notice."</i>
-      </p>
-      <p class="quote-author">
-        <span class="highlight">Jack Day, Founder and Director</span>
-      </p>
-    </div>
+    <!-- Why Flok Exists Section -->
+    <section class="gradient-box-bottom">
+      <div class="content">
+        <h1 class="why-flok-heading" style="text-align: center;">
+          <span class="highlight">Why Flok Exists</span>
+        </h1>
 
-    <!-- Back to Top Button -->
-    <div class="back-to-top-container">
-      <button id="backToTop" class="back-to-top">
-        <img src="images/arrow.png" width="30" height="30" alt="Back to top arrow">
-      </button>
-      <p class="back-to-top-label">Back to Top</p>
-    </div>
+        <p class="why-flok-text">
+          We've lived the reality of last-minute cover falling through. We've felt the pressure
+          of unreliable temps, patchy communication and slow, outdated hiring systems.
+        </p>
 
-  </section>
+        <p class="why-flok-text">
+          We've worked the shifts, led the teams and dealt with agencies that didn't understand
+          the job or care to.
+        </p>
+
+        <p class="why-flok-text">Flok is created to change that.</p>
+
+        <p class="why-flok-text">
+          A smarter, fairer way for hospitality people to find each other — quickly, directly,
+          and with respect on both sides.
+        </p>
+
+        <button class="contact-us-button"
+          onclick="window.open('https://tally.so/r/mKrEN8', '_blank', 'noopener,noreferrer')">Contact Us</button>
+
+        <!-- Founder Quote -->
+        <p class="quote">
+          <i>"Flok is the solution I wish had been available when I was managing kitchens
+            and facing the challenge of sourcing reliable staff on short notice."</i>
+        </p>
+        <p class="quote-author">
+          <span class="highlight">Jack Day, Founder and Director</span>
+        </p>
+      </div>
+
+      <!-- Back to Top Button -->
+      <div class="back-to-top-container">
+        <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+          <img src="images/arrow.png" width="30" height="30" alt="">
+        </button>
+        <p class="back-to-top-label">Back to Top</p>
+      </div>
+
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -255,16 +296,17 @@
         <h3 class="footer-heading">Connect on Social</h3>
         <ul class="social-links">
           <li>
-            <img src="images/facebooklogo.png" alt="Facebook Logo" class="social-icon" />
-            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank">@FlokJobs</a>
+            <img src="images/facebooklogo.png" alt="Facebook Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank"
+              rel="noopener noreferrer">@FlokJobs</a>
           </li>
           <li>
-            <img src="images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" />
-            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank">@FlokJobs</a>
+            <img src="images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank" rel="noopener noreferrer">@FlokJobs</a>
           </li>
           <li>
-            <img src="images/instagramlogo.png" alt="Instagram Logo" class="social-icon" />
-            <a href="https://www.instagram.com/flokjobs/" target="_blank">@FlokJobs</a>
+            <img src="images/instagramlogo.png" alt="Instagram Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.instagram.com/flokjobs/" target="_blank" rel="noopener noreferrer">@FlokJobs</a>
           </li>
         </ul>
       </div>
@@ -273,15 +315,14 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom">
       <p class="copyright">© 2025 Flok</p>
-      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo"></a>
+      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo" width="960" height="450"></a>
     </div>
   </footer>
-
 
   <!-- JavaScript -->
   <script src="js/overlay-menu.js"></script>
   <script src="js/back-to-top.js"></script>
 
-
 </body>
+
 </html>

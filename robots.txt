@@ -1,0 +1,6 @@
+# Allow everything by default
+User-agent: *
+Allow: /
+
+# XML sitemap (absolute URL, canonical host)
+Sitemap: https://www.flokjobs.com/sitemap.xml

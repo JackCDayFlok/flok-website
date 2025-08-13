@@ -7,28 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
   <meta name="description"
-        content="Flok Jobs is a UK-based hiring platform built for hospitality. We connect verified candidates with venues that need flexible, reliable staff in real time.">
+    content="Flok Jobs is a UK-based hiring platform built for hospitality. We connect verified candidates with venues that need flexible, reliable staff in real time.">
 
-  <!-- Absolute canonical -->
+  <!-- ——————————— ABSOLUTE CANONICAL ——————————— -->
   <link rel="canonical" href="https://www.flokjobs.com/about">
 
   <!-- ——————————— SOCIAL CARDS ——————————— -->
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://www.flokjobs.com/about">
-  <meta property="og:title"       content="About Flok Jobs">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.flokjobs.com/about">
+  <meta property="og:title" content="About Flok Jobs">
+  <meta property="og:site_name" content="Flok Jobs">
   <meta property="og:description" content="Learn how Flok Jobs is reinventing hospitality recruitment in the UK.">
-  <meta property="og:image"       content="https://www.flokjobs.com/images/og-home.png">
-  <meta property="og:locale"      content="en_GB">
+  <meta property="og:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta property="og:locale" content="en_GB">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="About Flok Jobs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Flok Jobs">
   <meta name="twitter:description" content="Learn how Flok Jobs is reinventing hospitality recruitment in the UK.">
-  <meta name="twitter:image"       content="https://www.flokjobs.com/images/og-home.png">
+  <meta name="twitter:image" content="https://www.flokjobs.com/images/og-home.png">
 
   <!-- ———————————  STRUCTURED DATA  ——————————— -->
-
   <script type="application/ld+json">{
     "@context":"https://schema.org",
     "@type":"Organization",
@@ -36,7 +36,7 @@
     "url":"https://www.flokjobs.com",
     "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
     "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
-    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
+    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509","https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
     "address":{"@type":"PostalAddress","addressCountry":"GB"}
   }</script>
 
@@ -56,10 +56,9 @@
     "@type":"AboutPage",
     "name":"About Flok Jobs",
     "url":"https://www.flokjobs.com/about",
-    "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
     "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
-    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
-    "address":{"@type":"PostalAddress","addressCountry":"GB"}
+    "image":"https://www.flokjobs.com/images/flokjobs-logo.png",
+    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509","https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"]
   }</script>
 
   <!-- ———————————  PWA / THEME  ——————————— -->
@@ -70,55 +69,67 @@
   <meta name="theme-color" content="#121212">
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
+  <!-- ———————————  PRELOADING ——————————— -->
+  <link rel="preload" href="/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- —————————————————  ASSETS  ————————————————— -->
   <title>About - Flok Jobs</title>
-  <link rel="icon" href="images/favicon.png" type="image/x-icon"><!-- root-relative path -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <!-- Fixed Header Navigation -->
   <header class="sticky-header">
     <div class="header-content">
       <!-- Logo -->
-      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo"></a>
+      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo" width="960" height="450"></a>
 
       <!-- Mobile Action Buttons -->
       <div class="header-buttons">
-        <button class="header-btn work-btn" onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I'm looking<br>for work</button>
-        <button class="header-btn staff-btn" onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I'm looking<br>for staff</button>
+        <button class="header-btn work-btn"
+          onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I'm looking<br>for
+          work</button>
+        <button class="header-btn staff-btn"
+          onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I'm looking<br>for
+          staff</button>
       </div>
 
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <a href="/" class="nav-btn">Home</a>
-        <a href="/about" class="nav-btn active">About</a>
+        <a href="/about" class="nav-btn active" aria-current="page">About</a>
         <a href="/blog" class="nav-btn">Blog</a>
-        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank">Contact Us</a>
+        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
         <a href="/interested" class="nav-btn cta">Interested?</a>
         <a href="/login" class="desktop-link login-link">Login</a>
       </nav>
 
       <!-- Mobile Hamburger Menu -->
-      <div class="hamburger-menu" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <button id="mobileMenuToggle" class="hamburger-menu" aria-label="Open menu" aria-controls="mobileOverlay"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
       <!-- Mobile Overlay Menu -->
       <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true">
         <div class="overlay-content">
           <div class="overlay-header">
             <div class="logo-wrapper">
-              <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo"></a>
+              <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo" width="960"
+                  height="450"></a>
             </div>
           </div>
           <nav class="overlay-nav" aria-label="Mobile navigation">
             <a class="overlay-link" href="/">Home</a>
-            <a class="overlay-link active" href="/about">About</a>
+            <a class="overlay-link active" href="/about" aria-current="page">About</a>
             <a class="overlay-link" href="/blog">Blog</a>
-            <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank">Contact Us</a>
+            <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank" rel="noopener noreferrer">Contact
+              Us</a>
             <a class="overlay-link interested" href="/interested">Interested?</a>
           </nav>
           <div class="overlay-login-wrapper">
@@ -127,7 +138,7 @@
 
           <button id="closeOverlay" class="close-btn" aria-label="Close menu">
             <div class="circle-arrow">
-              <img src="images/arrow.png" class="arrow" alt="Back arrow">
+              <img src="images/arrow.png" class="arrow" alt="Back arrow" width="50" height="50">
             </div>
           </button>
         </div>
@@ -136,7 +147,7 @@
   </header>
 
   <!-- Main Content Section -->
-  <section class="main-section">
+  <section class="main-section" id="main-content" role="main" tabindex="-1">
     <div class="content">
 
       <h1>About Flok</h1>
@@ -152,9 +163,10 @@
       <p>Outdated job boards. Expensive recruitment agencies. Ghosting. No feedback. No real connection.
         The traditional way of hiring in hospitality is broken and impersonal.</p>
       <p>Flok exists to change that.</p>
-      <p><span class="highlight">We're building a more human approach to hiring</span> and one that's fast, transparent and rooted in real hospitality experience.
+      <p><span class="highlight">We're building a more human approach to hiring</span> and one that's fast, transparent
+        and rooted in real hospitality experience.
         Because this industry deserves better.</p>
-      
+
       <h1 class="why-flok">Why Flok?</h1>
       <ul class="bullet-list">
         <li>Built from real hospitality experience — not generic tech or outdated recruitment models.</li>
@@ -165,50 +177,53 @@
       <p>Designed to bring speed, trust and fairness back into hiring.</p>
       <p>We're not another recruitment agency. We're not another job board.</p>
       <p><span class="highlight"><i>We're Flok, and we're building the future of hospitality hiring.</i></span></p>
-      
+
 
       <section class="founder-section">
         <h1 class="founder-title">Who's behind Flok?</h1>
         <div class="founder-wrapper">
-            <div class="founder-text">
+          <div class="founder-text">
             <div class="founder-image-mobile">
-                <img src="images/jackday.jpg" alt="Founder Jack Day">
-                <p class="founder-caption">Founder and Director,<br>Jack Day</p>
+              <img src="images/jackday.jpg" alt="Founder Jack Day">
+              <p class="founder-caption">Founder and Director,<br>Jack Day</p>
             </div>
             <p>Flok was founded by <span class="highlight">Jack Day</span>,
-                a chef and hospitality professional with over 25 years of industry experience.<br><br>
-                Jack has worked in Michelin-starred kitchens, led teams at high-end events, catered for luxury brands,
-                corporate clients and even trained at prestigious institutions like Hambleton Hall and The Ritz, London.</p>
+              a chef and hospitality professional with over 25 years of industry experience.<br><br>
+              Jack has worked in Michelin-starred kitchens, led teams at high-end events, catered for luxury brands,
+              corporate clients and even trained at prestigious institutions like Hambleton Hall and The Ritz, London.
+            </p>
 
             <p>He built a successful recruitment agency from scratch,
               gaining firsthand knowledge of what works and what doesn't in hiring hospitality staff.</p>
             <p>This unique blend of on-the-ground experience and recruitment insight led to one clear conclusion:
-                the current system is broken. It's outdated, inefficient and far too impersonal for both employers and jobseekers.</p>
+              the current system is broken. It's outdated, inefficient and far too impersonal for both employers and
+              jobseekers.</p>
 
             <p>Flok isn't a trend or a tech side project. It's the product of real experience,
-                years in the field and a quiet mission to create something better.</p>
-            
+              years in the field and a quiet mission to create something better.</p>
+
             <p>A platform built not just for the industry but by someone who's lived it.</p>
-            </div>
-        <div class="founder-image-desktop">
-            <img src="images/jackday.jpg" alt="Founder Jack Day">
+          </div>
+          <div class="founder-image-desktop">
+            <img src="images/jackday.jpg" alt="Founder Jack Day" width="480" height="480">
             <p class="founder-caption">Founder and Director, Jack Day</p>
+          </div>
         </div>
-        </div>
-    </section>
+      </section>
 
-    <h1>What's Next</h1>
-    <p>We're launching soon. <a href="/interested" >Sign up now</a> to join Flok early and receive some great benefits.</p>
-    <p>This isn't just another platform. It's a movement built by hospitality, for hospitality.</p>
+      <h1>What's Next</h1>
+      <p>We're launching soon. <a href="/interested">Sign up now</a> to join Flok early and receive some great benefits.
+      </p>
+      <p>This isn't just another platform. It's a movement built by hospitality, for hospitality.</p>
 
-    <p class="tagline">Skip the agency. <span class="highlight">Find the Flok.</span></p>
+      <p class="tagline">Skip the agency. <span class="highlight">Find the Flok.</span></p>
 
     </div>
 
     <!-- Back to Top Button -->
     <div class="back-to-top-container">
-      <button id="backToTop" class="back-to-top">
-        <img src="images/arrow.png" width="30" height="30" alt="Back to top arrow">
+      <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+        <img src="images/arrow.png" width="30" height="30" alt="">
       </button>
       <p class="back-to-top-label">Back to Top</p>
     </div>
@@ -236,16 +251,17 @@
         <h3 class="footer-heading">Connect on Social</h3>
         <ul class="social-links">
           <li>
-            <img src="images/facebooklogo.png" alt="Facebook Logo" class="social-icon" />
-            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank">@FlokJobs</a>
+            <img src="images/facebooklogo.png" alt="Facebook Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.facebook.com/people/Flok-Jobs/61576512420509/" target="_blank"
+              rel="noopener noreferrer">@FlokJobs</a>
           </li>
           <li>
-            <img src="images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" />
-            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank">@FlokJobs</a>
+            <img src="images/linkedinlogo.png" alt="LinkedIn Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.linkedin.com/company/flokjobs/" target="_blank" rel="noopener noreferrer">@FlokJobs</a>
           </li>
           <li>
-            <img src="images/instagramlogo.png" alt="Instagram Logo" class="social-icon" />
-            <a href="https://www.instagram.com/flokjobs/" target="_blank">@FlokJobs</a>
+            <img src="images/instagramlogo.png" alt="Instagram Logo" class="social-icon" width="500" height="500" />
+            <a href="https://www.instagram.com/flokjobs/" target="_blank" rel="noopener noreferrer">@FlokJobs</a>
           </li>
         </ul>
       </div>
@@ -254,7 +270,7 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom">
       <p class="copyright">© 2025 Flok</p>
-      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo"></a>
+      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo" width="960" height="450"></a>
     </div>
   </footer>
 
@@ -262,6 +278,6 @@
   <script src="js/overlay-menu.js"></script>
   <script src="js/back-to-top.js"></script>
 
-
 </body>
+
 </html>
