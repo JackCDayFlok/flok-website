@@ -507,8 +507,8 @@ p {
 }
 
 /* ==========================================================================
-   FOOTER STYLES
-   ========================================================================== */
+    FOOTER STYLES
+    ========================================================================== */
 
 .footer {
     background-color: #1f1f50;
@@ -600,7 +600,7 @@ p {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 40px;
     width: auto;
     margin: 0;
 }
@@ -609,7 +609,7 @@ p {
     font-size: 0.9rem;
     margin: 0;
     align-self: flex-end;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     font-weight: 400;
 }
 
