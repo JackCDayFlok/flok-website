@@ -49,6 +49,7 @@ a {
     color: #ffdb15;
 }
 
+
 /* Show skip link only when tabbed to */
 .skip-link {
     position: absolute;
@@ -449,6 +450,12 @@ h1 {
     font-size: 0.94rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    pointer-events: none;
+}
+
+.desc a {
+    color: white;
+    text-decoration: none;
 }
 
 .signup-button {
@@ -907,6 +914,12 @@ h1 {
 
     .desc {
         font-size: 1.2rem;
+    }
+
+    .desc a {
+        color: #ffdb15;
+        text-decoration:underline;
+        pointer-events: visible;
     }
 
     .coming-soon {
