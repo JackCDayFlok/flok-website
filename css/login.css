@@ -620,7 +620,7 @@ a {
     }
 
     .header-content {
-        max-width: 1200px;
+        max-width: min(1200px, 95%);
         margin: 0 auto;
         padding: 0 2rem;
     }
@@ -672,7 +672,7 @@ a {
         justify-content: center;
         align-items: stretch;
         gap: 2rem;
-        max-width: 1200px;
+        max-width: min(1200px, 95%);
         margin: 0 auto;
         padding: 0 2rem;
         position: relative;
@@ -750,7 +750,7 @@ a {
 
     .footer-bottom {
         margin-top: 3rem;
-        max-width: 1200px;
+        max-width: min(1200px, 95%);
         margin-left: auto;
         margin-right: auto;
         padding-top: 1rem;

@@ -26,6 +26,10 @@
    BASE STYLES
    ========================================================================== */
 
+html {
+      -webkit-text-size-adjust: 100%;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -539,7 +543,7 @@ h1 {
 .how-it-works-section {
     position: relative;
     background: transparent;
-    padding: 11rem 1.5rem;
+    padding: 11rem 1.5rem 5rem;
     color: #000;
     z-index: 15;
 }
@@ -596,7 +600,7 @@ h1 {
     padding: 6rem 1.5rem 8rem 1.5rem;
     position: relative;
     z-index: 2;
-    margin-top: -6rem;
+    margin-top: -5rem;
 }
 
 .gradient-box-bottom::before {
@@ -948,7 +952,7 @@ h1 {
     }
 
     .gradient-box .content {
-        max-width: 1200px;
+        max-width: min(1200px, 95%);
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -1067,7 +1071,7 @@ h1 {
     }
 
     .how-it-works-section .content {
-        max-width: 1200px;
+        max-width: min(1200px, 95%);
         margin: 0 auto;
     }
 
@@ -1115,7 +1119,7 @@ h1 {
     }
 
     .gradient-box-bottom .content {
-        max-width: 1200px;
+        max-width: min(1200px, 95%);
     }
 
     .gradient-box-bottom::before {
@@ -1179,7 +1183,7 @@ h1 {
         justify-content: center;
         align-items: stretch;
         gap: 2rem;
-        max-width: 1200px;
+        max-width: 88%;
         margin: 0 auto;
         padding: 0 2rem;
         position: relative;
@@ -1257,7 +1261,7 @@ h1 {
 
     .footer-bottom {
         margin-top: 3rem;
-        max-width: 1200px;
+        max-width: 88%;
         margin-left: auto;
         margin-right: auto;
         padding-top: 1rem;
