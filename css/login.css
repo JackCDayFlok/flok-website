@@ -232,7 +232,6 @@ a {
     transform: translateY(-10px);
     transition: opacity .35s ease, transform .35s ease;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .mobile-overlay.open {
