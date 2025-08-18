@@ -133,7 +133,6 @@ a {
     flex: 1;
     text-align: center;
     word-break: break-word;
-    hyphens: auto;
 }
 
 .header-btn:hover {
