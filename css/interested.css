@@ -39,12 +39,17 @@ body {
     color: white;
 }
 
-/* Fix 1: Prevent body scroll when overlay is open */
 body.menu-open {
     overflow: hidden;
     position: fixed;
     width: 100%;
 }
+
+:root {
+  --container-min: 1200px;
+  --container-max: 1600px;
+}
+
 
 a {
     color: #ffdb15;
@@ -617,6 +622,20 @@ p {
    ========================================================================== */
 
 @media (min-width: 768px) {
+
+    .header-content,
+    .gradient-box .content,
+    .how-it-works-section .content,
+    .gradient-box-bottom .content,
+    .footer-columns,
+    .footer-bottom {
+        /* clamp(min, fluid, max): grows with viewport but never exceeds max */
+        max-width: clamp(var(--container-min), 85vw, var(--container-max)) !important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
     /* Header Desktop Styles */
     .header-buttons,
