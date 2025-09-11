@@ -4,29 +4,28 @@
 <head>
   <!-- ——————————————— CORE ——————————————— -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
-  <meta name="description"
-    content="Looking for work or staff in hospitality? Let Flok Jobs know you're interested and we'll be in touch.">
+  <meta name="description" content="{{PAGE_DESCRIPTION}}">
 
   <!-- ——————————— ABSOLUTE CANONICAL ——————————— -->
-  <link rel="canonical" href="https://www.flokjobs.com/interested">
+  <link rel="canonical" href="https://www.flokjobs.com/{{PAGE_URL}}">
 
   <!-- ——————————— SOCIAL CARDS ——————————— -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.flokjobs.com/interested">
-  <meta property="og:title" content="Interested in Flok Jobs?">
+  <meta property="og:url" content="https://www.flokjobs.com/{{PAGE_URL}}">
+  <meta property="og:title" content="{{PAGE_TITLE}} - Flok Jobs">
   <meta property="og:site_name" content="Flok Jobs">
-  <meta property="og:description" content="Looking for work or staff in hospitality? Register your interest.">
-  <meta property="og:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta property="og:description" content="{{PAGE_DESCRIPTION}}">
+  <meta property="og:image" content="https://www.flokjobs.com/images/og-{{PAGE_SLUG}}.png">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Interested in Flok Jobs?">
-  <meta name="twitter:description" content="Looking for work or staff in hospitality? Register your interest.">
-  <meta name="twitter:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta name="twitter:title" content="{{PAGE_TITLE}} - Flok Jobs">
+  <meta name="twitter:description" content="{{PAGE_DESCRIPTION}}">
+  <meta name="twitter:image" content="https://www.flokjobs.com/images/og-{{PAGE_SLUG}}.png">
 
   <!-- ———————————  STRUCTURED DATA  ——————————— -->
   <script type="application/ld+json">{
@@ -57,18 +56,17 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Flok Jobs">
   <meta name="theme-color" content="#121212">
-  <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
   <!-- ———————————  PRELOADING ——————————— -->
-  <link rel="preload" href="/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Poppins-Regular.ttf" type="font/ttf" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Poppins-Bold.ttf" type="font/ttf" crossorigin>
 
   <!-- —————————————————  ASSETS  ————————————————— -->
-  <title>Interested - Flok Jobs</title>
+  <title>{{PAGE_TITLE}} - Flok Jobs</title>
   <link rel="icon" href="images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="48x48"  href="images/favicon48.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon192.png">
-  <link rel="stylesheet" href="css/interested.css">
+  <link rel="stylesheet" href="css/test.css">
 </head>
 
 <body>
@@ -79,7 +77,8 @@
   <header class="sticky-header">
     <div class="header-content">
       <!-- Logo -->
-      <a href="/"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo" width="960" height="450"></a>
+      <a href="index.html"><img src="images/floklogo.png" class="header-logo" alt="Flok Logo" width="960"
+          height="450"></a>
 
       <!-- Mobile Action Buttons -->
       <div class="header-buttons">
@@ -92,14 +91,33 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="desktop-nav">
-        <a href="/" class="nav-btn">Home</a>
-        <a href="/about" class="nav-btn">About</a>
-        <a href="/blog" class="nav-btn">Blog</a>
-        <a href="https://tally.so/r/mKrEN8" class="nav-btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
-        <a href="/interested" class="nav-btn cta" aria-current="page">Interested?</a>
-        <a href="/login" class="desktop-link login-link">Login</a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <div class="menu-group">
+          <a href="index.html" class="nav-btn {{HOME_ACTIVE}}" {{HOME_ARIA}}>Home</a>
+          <a href="employers.html" class="nav-btn">Employers</a>
+          <a href="workers.html" class="nav-btn">Workers</a>
+
+          <!-- Resources toggle -->
+          <button id="resourcesToggle"
+                  class="nav-btn resources-btn"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="resourcesDropdown">
+            Resources
+          </button>
+
+          <!-- Get the App -->
+          <a href="get-the-app.html" class="nav-btn cta-app">Get the App</a>
+        </div>
+
+        <!-- Auth links -->
+        <div class="auth-links">
+          <a href="login.html">Login</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="signup.html">Signup</a>
+        </div>
       </nav>
+
 
       <!-- Mobile Hamburger Menu -->
       <button id="mobileMenuToggle" class="hamburger-menu" aria-label="Open menu" aria-controls="mobileOverlay"
@@ -112,20 +130,20 @@
         <div class="overlay-content">
           <div class="overlay-header">
             <div class="logo-wrapper">
-              <a href="/"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo" width="960"
+              <a href="index.html"><img src="images/floklogo.png" class="overlay-logo" alt="Flok Logo" width="960"
                   height="450"></a>
             </div>
           </div>
           <nav class="overlay-nav" aria-label="Mobile navigation">
-            <a class="overlay-link" href="/">Home</a>
-            <a class="overlay-link" href="/about">About</a>
-            <a class="overlay-link" href="/blog">Blog</a>
+            <a class="overlay-link" href="index.html" {{HOME_ARIA}}>Home</a>
+            <a class="overlay-link" href="about.html">About</a>
+            <a class="overlay-link" href="blog.html">Blog</a>
             <a class="overlay-link" href="https://tally.so/r/mKrEN8" target="_blank" rel="noopener noreferrer">Contact
               Us</a>
-            <a class="overlay-link interested" href="/interested" aria-current="page">Interested?</a>
+            <a class="overlay-link interested" href="interested.html">Interested?</a>
           </nav>
           <div class="overlay-login-wrapper">
-            <a class="overlay-login" href="/login">Login</a>
+            <a class="overlay-login" href="login.html">Login</a>
           </div>
 
           <button id="closeOverlay" class="close-btn" aria-label="Close menu">
@@ -138,18 +156,59 @@
     </div>
   </header>
 
-  <!-- Main Content Section -->
-  <section class="main-section" id="main-content" role="main" tabindex="-1">
-    <div class="content">
-      <h1>What are you looking for?</h1>
-      <div class="button-container">
-        <button class="choice-btn" onclick="window.open('https://tally.so/r/3NZXAN', '_blank', 'noopener,noreferrer')">I
-          am looking for work</button>
-        <button class="choice-btn" onclick="window.open('https://tally.so/r/m66o5B', '_blank', 'noopener,noreferrer')">I
-          am looking for staff</button>
+  <!-- paste this immediately AFTER </header> -->
+  <div id="resourcesDropdown" class="resources-dropdown" role="region" aria-labelledby="resourcesToggle">
+    <div class="resources-inner">
+      <!-- decorative dots -->
+      <img class="decor-left" src="images/decor-dots-left.svg" alt="" aria-hidden="true">
+      <img class="decor-bottom" src="images/decor-dots-bottom.svg" alt="" aria-hidden="true">
+
+      <div class="resources-grid">
+        <!-- columns -->
+        <div class="links-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="about.html">About Flok</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h3>Get Help</h3>
+          <ul>
+            <li><a href="https://tally.so/r/mKrEN8" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+            <li><a href="help-centre.html">Help Centre</a></li>
+          </ul>
+        </div>
+
+        <!-- right-side image with left fade -->
+        <div class="image-col">
+          <div class="fade-wrap">
+            <img src="images/footerimage.png" alt="Hospitality staff at work">
+            <span class="fade-left" aria-hidden="true"></span>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- PAGE CONTENT GOES HERE -->
+    <section class="main-section">
+      <div class="content">
+        <h1>Flok Page <span class="highlight">Template</span></h1>
+        <p>This is a template page.</p>
+        <p>You can use this HTML file, alongside its respective CSS file, to create new Flok pages.</p>
+        <p>This is example text.</p>
+        <p>This is example text.</p>
+
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -191,12 +250,15 @@
     <!-- Footer Bottom -->
     <div class="footer-bottom">
       <p class="copyright">© 2025 Flok</p>
-      <a href="/"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo" width="960" height="450"></a>
+      <a href="index.html"><img src="images/floklogo.png" alt="Flok Logo" class="footer-logo" width="960"
+          height="450"></a>
     </div>
   </footer>
 
   <!-- JavaScript -->
   <script src="js/overlay-menu.js"></script>
+  <script src="js/back-to-top.js"></script>
+  <script src="js/resources-dropdown.js"></script>
 
 </body>
 

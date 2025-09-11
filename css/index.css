@@ -51,8 +51,8 @@ body.menu-open {
 }
 
 :root {
-  --container-min: 1200px;
-  --container-max: 1600px;
+    --container-min: 1200px;
+    --container-max: 1600px;
 }
 
 a {
@@ -489,6 +489,478 @@ h1 {
     /* Hidden on mobile */
 }
 
+/* Flok vs Agency */
+
+.flok-vs-agency {
+    max-width: 65vw;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    align-content: end;
+    justify-content: center;
+    margin: 0 auto 5rem;
+    perspective: 900px;
+}
+
+.flok-vs-agency table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Make cells transformable and smooth */
+.flok-vs-agency thead th,
+.flok-vs-agency tbody td {
+  position: relative;
+  z-index: 0;
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease, background .25s ease, border-color .25s ease;
+  will-change: transform;
+}
+
+/* 3D stage */
+.flok-vs-agency { perspective: 900px; }
+
+/* Let us position an overlay inside the table */
+.flok-vs-agency table {
+  position: relative;
+  border-collapse: separate; /* so shadows aren't clipped */
+  border-spacing: 0;
+  --flok-left: 0px;   /* set by JS */
+  --flok-width: 0px;  /* set by JS */
+}
+
+/* One-piece highlight for the entire Flok column */
+.flok-vs-agency table::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--flok-left);
+  width: var(--flok-width);
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+
+  /* the "closer" look */
+  transform: translateZ(32px) scale(1.02);
+  background: #3a3a6f;
+  box-shadow: 0 14px 40px rgba(255,255,255,0.35);
+  border-radius: 10px;
+}
+
+.flok-vs-agency thead th:nth-child(2),
+.flok-vs-agency tbody td:nth-child(2) {
+    background: transparent;
+    border-bottom: none !important;
+    position: relative;
+    z-index: 3; /* text stays above the overlay */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+td {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.flok-agency-positive {
+    color: #ffdb15;
+    font-weight: 600;
+}
+
+.flok-agency-negative {
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.checkmark::before {
+    content: '✓';
+    color: #ffdb15;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.xmark::before {
+    content: '✗';
+    color: #FFFFFF;
+    opacity: 0.7;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.flok-agency-desc {
+    font-size: 12px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.flok-agency-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.flok-agency-cta p {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.flok-agency-cta a {
+    display: inline-block;
+    background: #ffdb15;
+    color: #0f172a;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.flok-agency-cta a:hover {
+    background: #e6c412;
+}
+
+
+
+/* Carousel */
+
+.carousel-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    /* Fixes position to edges of screen */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+}
+
+.carousel {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    gap: 30px;
+    padding-left: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px 0;
+    padding-bottom: 0;
+    width: 400px;
+    flex-shrink: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.location-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center;    /* center pin + text */
+  gap: 2px;               /* small spacing between icon and text */
+  font-size: 12px;
+  color: #666;
+}
+
+.map-pin {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+
+.distance {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden; /* ensures image is clipped to circle */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures it fills the circle neatly */
+  border-radius: 50%; /* keeps it circular */
+  display: block;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-role {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.profile-role span {
+    font-size: 18px;
+    color: #666;
+}
+
+.verified {
+    background: #4CAF50;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.stars {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.star {
+    color: gray;
+    font-size: 24px;
+    position: relative;
+}
+
+.star.full {
+    color: #FFD700;
+}
+
+.star.half {
+    background: linear-gradient(90deg, #FFD700 50%, gray 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Advanced fractional rating system */
+.stars[data-rating] {
+    position: relative;
+    display: inline-block;
+}
+
+.stars-bg {
+    color: gray;
+    position: relative;
+    z-index: 1;
+}
+
+.stars-fill {
+    color: #FFD700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.rating-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.badges-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    height: 155px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: #FFD700;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.certifications {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    height: 55%;
+    align-content: center;
+}
+
+.certification {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.certification:last-child {
+    margin-bottom: 0;
+}
+
+.cert-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+}
+
+.cert-icon.food {
+    background: #FFD700;
+    color: #333;
+}
+
+.experience-section {
+    position: relative;
+}
+
+.experience-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.experience-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    position: relative;
+}
+
+.experience-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: linear-gradient(transparent, white);
+    pointer-events: none;
+}
+
+.card-quote {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.barista-quote {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+    justify-content: center;
+    color: black;
+    font-size: 16px;
+}
+
+
+
 /* Silver Background Section */
 .silverbar-wrapper {
     background: url('../images/silverbackground1.svg') no-repeat center center;
@@ -621,61 +1093,6 @@ h1 {
     width: 400px;
     height: 330px;
     opacity: 0.1;
-}
-
-.benefits-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-.benefit-box {
-    background: linear-gradient(to bottom, #C0C0C0, #B0B3C5, #D6D6E0);
-    border-radius: 40px;
-    padding: 40px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.benefit-title {
-    background: white;
-    color: black;
-    text-align: center;
-    padding: 20px;
-    border-radius: 100px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.benefit-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    color: #1f1f50;
-    line-height: 1.4;
-}
-
-.benefit-icon {
-    width: 10px;
-    height: 15px;
-    background: black;
-    border-radius: 4px;
-    margin-right: 15px;
-    margin-top: 3px;
-    flex-shrink: 0;
-}
-
-.benefit-text strong {
-    font-weight: bold;
-    color: #1f1f50;
 }
 
 .why-flok-heading {
@@ -932,25 +1349,6 @@ h1 {
         display: none;
     }
 
-    .benefits-section {
-        grid-template-columns: 1fr 1fr;
-        gap: 120px;
-        margin-bottom: 5rem;
-        margin-top: 4rem;
-    }
-    
-    .main-heading {
-        font-size: 2rem;
-    }
-    
-    .benefit-box {
-        padding: 30px;
-    }
-    
-    .benefit-item {
-        font-size: 1rem;
-    }
-
     .desktop-nav {
         display: flex;
         gap: 1rem;
@@ -1044,7 +1442,7 @@ h1 {
 
     .desc a {
         color: #ffdb15;
-        text-decoration:underline;
+        text-decoration: underline;
         pointer-events: visible;
     }
 
@@ -1303,3 +1701,9 @@ h1 {
         height: 40px;
     }
 }
+
+
+
+
+
+
