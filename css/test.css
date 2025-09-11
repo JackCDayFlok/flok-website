@@ -116,7 +116,7 @@ a {
 }
 
 .header-logo {
-    height: 30px;
+    height: 40px;
     width: auto;
     margin: 0;
 }
@@ -155,30 +155,55 @@ a {
     transform: translateY(0);
 }
 
+.header-btn.app-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  background: #00C2CB;
+  color: #00151f;
+  border: 6px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex: none;
+  text-align: center;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.15) inset;
+  font-size: 1.1rem;
+}
+
+.header-btn.app-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.header-btn.app-btn:active {
+  transform: translateY(0);
+}
+
 .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    cursor: pointer;
-    flex-shrink: 0;
-    padding: 8px;
-    min-width: 32px;
-    align-items: center;
-    background: none;
-    border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 12px;
+  min-width: 48px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
 }
 
 .hamburger-menu span {
-    width: 25px;
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+  width: 45px;
+  height: 4.5px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.hamburger-menu:hover span {
-    background: #ffdb15;
-}
 
 /* Desktop Navigation - Hidden by default */
 .desktop-nav {
@@ -187,6 +212,13 @@ a {
 
 .login-link {
     display: none;
+}
+
+/* Resources dropdown hidden on mobile */
+@media (max-width:767px) {
+    .resources-dropdown {
+        display: none;
+    }
 }
 
 .nav-btn {
@@ -229,14 +261,15 @@ a {
    MOBILE OVERLAY MENU
    ======================== */
 
+/* Mobile Overlay with Responsive Scaling */
 .mobile-overlay {
     position: fixed;
     inset: 0;
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     display: flex;
     justify-content: center;
-    align-items: start;
-    padding: 3rem 1.5rem;
+    align-items: center; /* Changed from start to center for better vertical centering */
+    padding: clamp(1rem, 4vh, 3rem) 1.5rem;
     z-index: 2000;
     opacity: 0;
     pointer-events: none;
@@ -254,79 +287,43 @@ a {
 
 .overlay-content {
     width: 100%;
-    max-width: 80%;
+    max-width: min(80%, 400px);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: clamp(1rem, 3vh, 2rem);
     position: relative;
-    margin-top: -1rem;
-}
-
-.overlay-login-wrapper {
-    margin-top: 1rem;
-    display: flex;
+    height: fit-content;
+    max-height: 85vh; /* Prevent overflow on very short screens */
     justify-content: center;
 }
 
 .overlay-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: -2rem;
+    margin-bottom: clamp(0.5rem, 2vh, 1rem);
 }
 
 .overlay-logo {
-    height: 40px;
+    height: clamp(30px, 6vh, 50px);
     width: auto;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    position: absolute;
-    bottom: -5rem;
-    right: 0rem;
-    width: 56px;
-    height: 56px;
-}
-
-.circle-arrow {
-    background: #ffdb15;
-    border: 3px solid white;
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-.circle-arrow .arrow {
-    display: block;
-    transform: rotate(90deg);
-    width: 30px;
-    height: 30px;
 }
 
 .overlay-nav {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: clamp(0.8rem, 2vh, 1.5rem);
 }
 
 .overlay-link {
-    background: white;
+    background: #ffdb15;
     color: black;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
-    padding: 1.4rem 2rem;
+    font-size: clamp(1.1rem, 3.5vh, 1.5rem);
+    padding: clamp(0.8rem, 2.5vh, 1.4rem) clamp(1.2rem, 4vh, 2rem);
+    border: 3px solid white;
     border-radius: 38px;
     text-align: center;
     display: block;
@@ -342,9 +339,85 @@ a {
     color: #1f1f50;
 }
 
-.overlay-link.interested {
-    border: 3px solid white;
+.overlay-login-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-top: clamp(0.5rem, 2vh, 1rem);
+}
+
+.overlay-login-wrapper a {
+    color: #ffdb15;
+    text-decoration: underline;
+    font-size: clamp(0.9rem, 2.5vh, 1rem);
+}
+
+.overlay-login-wrapper .sep {
+    color: #ffdb15;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    bottom: clamp(-4rem, -8vh, -5rem);
+    right: 0;
+    width: clamp(45px, 8vh, 56px);
+    height: clamp(45px, 8vh, 56px);
+}
+
+.circle-arrow {
     background: #ffdb15;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: clamp(45px, 8vh, 56px);
+    height: clamp(45px, 8vh, 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.circle-arrow .arrow {
+    display: block;
+    transform: rotate(90deg);
+    width: clamp(24px, 5vh, 30px);
+    height: clamp(24px, 5vh, 30px);
+}
+
+.overlay-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.overlay-link {
+    background: #ffdb15;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+    border: 3px solid white;
+    border-radius: 38px;
+    text-align: center;
+    display: block;
+    transition: transform .2s ease;
+}
+
+.overlay-link:hover {
+    transform: translateY(-2px);
+}
+
+.overlay-link.active {
+    background: #ffdb15;
+    color: #1f1f50;
 }
 
 .overlay-login {
@@ -521,7 +594,7 @@ h1 {
     ========================================================================== */
 
 .footer {
-    background-color: #1f1f50;
+    background-color: #1D1D40;
     color: white;
     padding: 2rem 1.5rem 4rem;
     font-family: 'Poppins', sans-serif;
@@ -625,7 +698,7 @@ h1 {
     font-size: 0.9rem;
     margin: 0;
     align-self: flex-end;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
@@ -664,7 +737,6 @@ h1 {
     }
 
     .header-content {
-        max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
     }
@@ -721,7 +793,7 @@ h1 {
 
     .login-link {
         font-size: 1rem;
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         font-weight: 400;
         color: #ffdb15;
         text-decoration: underline;
@@ -729,16 +801,11 @@ h1 {
         display: inline-block;
     }
 
-        /* ===== Resources dropdown (desktop) ===== */
-    :root{
-    --dropdown-bg: #1D1D40;
-    --brand-yellow: #ffdb15;
-    }
+    /* ===== Resources dropdown (desktop) ===== */
 
     /* active (yellow) state for Resources button */
     .resources-btn.is-open {
-        background: var(--brand-yellow);
-        color: #1f1f50;
+        background: #ffdb15;
         font-weight: 700;
     }
 
@@ -763,11 +830,10 @@ h1 {
 
     /* inner block */
     .resources-inner {
-        background: var(--dropdown-bg);
+        background: #1D1D40;
         padding: 3rem 0;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 12px 24px rgba(0,0,0,.35);
         max-height: 450px; /* adjust as you like */
     }
 
@@ -791,7 +857,7 @@ h1 {
 
     /* headings + links */
     .resources-grid h3 {
-        color: var(--brand-yellow);
+        color: #ffdb15;
         font-size: 2rem;
         margin: 0 0 1.25rem 0;
         font-weight: 700;
@@ -816,8 +882,8 @@ h1 {
     /* right image + fade */
         .image-col .fade-wrap {
         position: relative;
-        border-radius: 8px;
         overflow: hidden;
+        max-width: 320px;
     }
 
     .image-col img {
@@ -831,38 +897,31 @@ h1 {
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background: linear-gradient(to right, var(--dropdown-bg) 0%, rgba(29,29,64,0) 60%);
+        background: linear-gradient(to right, #1D1D40 0%, rgba(29,29,64,0) 60%);
     }
 
     /* decorative dots */
-    .decor-left,
-    .decor-bottom {
+    .dropdown-decor-left,
+    .dropdown-decor-bottom {
         position: absolute;
-        opacity: .35;
+        opacity: .25;
         user-select: none;
         pointer-events: none;
     }
 
-    .decor-left {
-        left: 1rem;
-        bottom: 3rem;
-        width: 220px;
+    .dropdown-decor-left {
+        left: 0;
+        top: 1rem;
+        width: 160px;
         height: auto;
     }
 
-    .decor-bottom {
-        left: 45%;
-        bottom: -20px;
-        width: 420px;
+    .dropdown-decor-bottom {
+        bottom: -6rem;
+        width: 160px;
         height: auto;
-        transform: translateX(-50%);
+        transform: rotate(-90deg);
     }
-
-    /* desktop only */
-    @media (max-width: 767px){
-    .resources-dropdown{ display:none !important; }
-    }
-
 
     /* Main Content Desktop */
 
