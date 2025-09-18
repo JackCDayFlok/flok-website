@@ -628,7 +628,7 @@ h1 {
   overflow: hidden;
 }
 
-/* Flok vs Agency */
+* Flok vs Agency */
 
 .flok-vs-agency {
     max-width: 90vw;
@@ -642,55 +642,68 @@ h1 {
 }
 
 .flok-vs-agency table {
-  border-collapse: separate;
-  border-spacing: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    --flok-left: 0px;   /* set by JS */
+    --flok-width: 0px;  /* set by JS */
+}
+
+.col-flok {
+    width: 15vw;
+}
+
+.col-agency {
+    width: 15vw;
 }
 
 /* Make cells transformable and smooth */
 .flok-vs-agency thead th,
 .flok-vs-agency tbody td {
-  position: relative;
-  z-index: 0;
-  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease, background .25s ease, border-color .25s ease;
-  will-change: transform;
+    position: relative;
+    z-index: 0;
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease, background .25s ease, border-color .25s ease;
+    will-change: transform;
+    background: #1D1D40;
 }
 
 /* 3D stage */
-.flok-vs-agency { perspective: 900px; }
-
-/* Let us position an overlay inside the table */
-.flok-vs-agency table {
-  position: relative;
-  border-collapse: separate; /* so shadows aren't clipped */
-  border-spacing: 0;
-  --flok-left: 0px;   /* set by JS */
-  --flok-width: 0px;  /* set by JS */
+.flok-vs-agency { 
+    perspective: 900px; 
 }
 
-/* One-piece highlight for the entire Flok column */
+/* Overlay for body cells only (excluding header) */
 .flok-vs-agency table::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: var(--flok-left);
-  width: var(--flok-width);
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
+    content: "";
+    position: absolute;
+    top: 10px; /* Adjust this to match your header height */
+    left: var(--flok-left);
+    width: var(--flok-width);
+    height: calc(100% - 60px); /* Subtract header height */
+    pointer-events: none;
+    z-index: 1;
 
-  /* the "closer" look */
-  transform: translateZ(32px) scale(1.02);
-  background: #3a3a6f;
-  box-shadow: 0 14px 40px rgba(255,255,255,0.35);
-  border-radius: 10px;
+    /* the "closer" look */
+    transform: translateZ(32px) scale(1.02);
+    background: #3a3a6f;
+    box-shadow: 0 14px 40px rgba(255,255,255,0.35);
+    border-radius: 50px;
 }
 
-.flok-vs-agency thead th:nth-child(2),
+/* Flok header gets its own elevated styling */
+.flok-vs-agency thead th:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    transform: translateZ(16px) scale(1.01);
+    border-bottom: none;
+}
+
+/* Body cells in Flok column */
 .flok-vs-agency tbody td:nth-child(2) {
-    background: transparent;
     border-bottom: none !important;
     position: relative;
     z-index: 3; /* text stays above the overlay */
+    background: transparent;
 }
 
 table {
@@ -706,7 +719,6 @@ th, td {
 }
 
 th {
-    background: rgba(255, 255, 255, 0.1);
     color: #FFFFFF;
     font-weight: 600;
     font-size: 30px;
@@ -721,6 +733,7 @@ td {
 .flok-agency-positive {
     color: #ffdb15;
     font-weight: 600;
+    font-size: 23px;
 }
 
 .flok-agency-negative {
@@ -780,6 +793,7 @@ td {
     background: #e6c412;
 }
 
+ABCD
 
 /* Back to Top */
 .back-to-top-container {
