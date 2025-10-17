@@ -782,7 +782,7 @@
                 <div class="step-number">3</div>
                 <div class="step-content">
                   <h3 class="step-title">Work. Get Paid.</h3>
-                  <p class="step-description">Confirm the shift. Get paid fast -<br>often within 24 hours.</p>
+                  <p class="step-description">Confirm the shift. Get paid fast - often within 24 hours.</p>
                 </div>
               </div>
             </div>
@@ -840,33 +840,25 @@
               <circle cx="200" cy="200" r="125" fill="none" stroke="url(#ringInner)" stroke-width="2" />
               <circle cx="200" cy="200" r="175" fill="none" stroke="url(#ringOuter)" stroke-width="2" />
 
-              <!-- Orbiting dots-->
-              <!-- Outer fast, clockwise -->
-              <g class="flokai-orbit" style="--dur:14s;">
-                <circle cx="200" cy="200" r="3.5" fill="#fff" />
-                <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="14s"
-                  repeatCount="indefinite" />
+              <!-- Orbiting dots -->
+              <!-- Outer fast, clockwise (on the left edge of the outer ring ~ r=175) -->
+              <g class="flokai-orbit" style="--dur:10s;">
+                <circle cx="25" cy="200" r="3.5" fill="#fff" />
               </g>
 
-              <!-- Inner medium, counter-clockwise -->
+              <!-- Inner medium, counter-clockwise (on the inner ring ~ r=125, above center) -->
               <g class="flokai-orbit reverse" style="--dur:10s;">
-                <circle cx="200" cy="200" r="3" fill="#fff"/>
-                <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="22s"
-                  repeatCount="indefinite" />
+                <circle cx="200" cy="75" r="3" fill="#fff"/>
               </g>
 
-              <!-- Small dot near top, slow clockwise -->
+              <!-- Small dot near top, slow clockwise (outer ring) -->
               <g class="flokai-orbit" style="--dur:8s;">
                 <circle cx="200" cy="25" r="4" fill="#fff" />
-                <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="36s"
-                  repeatCount="indefinite" />
               </g>
 
-              <!-- Small dot on right, medium counter-clockwise -->
-              <g class="flokai-orbit reverse" style="--dur:6s;">
+              <!-- Small dot on right, medium counter-clockwise (outer ring) -->
+              <g class="flokai-orbit reverse" style="--dur:12s;">
                 <circle cx="375" cy="200" r="2.8" fill="#fff" />
-                <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="28s"
-                  repeatCount="indefinite" />
               </g>
 
             </svg>
@@ -878,26 +870,28 @@
             <h2 class="flokai-title">
               <em>Meet FlokAI.</em> Your intelligent hiring assistant.
             </h2>
+            
+            <div class="flok-content">
+              <p class="flokai-eyebrow">Think. Match. Done.</p>
 
-            <p class="flokai-eyebrow">Think. Match. Done.</p>
+              <p class="flokai-copy">
+                Smart hiring shouldn't be hard. FlokAI learns what you need, finds who you need, when you need them.
+              </p>
 
-            <p class="flokai-copy">
-              Smart hiring shouldn't be hard. FlokAI learns what you need, finds who you need, when you need them.
-            </p>
+              <h3 class="flokai-subhead">What FlokAI does:</h3>
+              <ul class="flokai-list">
+                <li>Finds the perfect match for every shift</li>
+                <li>Checks availability instantly</li>
+                <li>Manages schedules seamlessly</li>
+                <li>Gets smarter with every hire</li>
+              </ul>
 
-            <h3 class="flokai-subhead">What FlokAI does:</h3>
-            <ul class="flokai-list">
-              <li>Finds the perfect match for every shift</li>
-              <li>Checks availability instantly</li>
-              <li>Manages schedules seamlessly</li>
-              <li>Gets smarter with every hire</li>
-            </ul>
-
-            <div class="flokai-why">
-              <span class="flokai-why-title">Why it works:</span>
-              <div class="flokai-why-chip">
-                FlokAI makes connecting effortless. No searching. No waiting. Just ask FlokAI and get matched with the
-                right people, right now.
+              <div class="flokai-why">
+                <span class="flokai-why-title">Why it works:</span>
+                <div class="flokai-why-chip">
+                  FlokAI makes connecting effortless. No searching. No waiting. Just ask FlokAI and get matched with the
+                  right people, right now.
+                </div>
               </div>
             </div>
           </div>
@@ -2305,7 +2299,6 @@
     window.addEventListener('load', measureAllCarousels);
     window.addEventListener('resize', measureAllCarousels);
   </script>
-
 
   <!-- Statistic counter animation -->
    <script>

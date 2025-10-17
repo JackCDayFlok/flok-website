@@ -21,7 +21,7 @@
 }
 
 /* ==========================================================================
-   BASE STYLES
+   BASE STYLES (Generic + Mobile)
    ========================================================================== */
 
 html {
@@ -38,9 +38,9 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     margin: 0;
-    background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     color: white;
     min-height: 100vh;
+    background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
 }
 
 body.menu-open {
@@ -82,7 +82,6 @@ a {
 
 #main-content {
     scroll-margin-top: 96px;
-
 }
 
 .main-section {
@@ -90,7 +89,7 @@ a {
 }
 
 /* ==========================================================================
-   HEADER STYLES
+   HEADER (Mobile-first)
    ========================================================================== */
 
 .sticky-header {
@@ -100,7 +99,7 @@ a {
     right: 0;
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-    padding: 2rem 1rem;
+    padding: 1.3rem 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     min-height: 60px;
     box-sizing: border-box;
@@ -156,56 +155,55 @@ a {
 }
 
 .header-btn.app-btn {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  background: #00C2CB;
-  color: #00151f;
-  border: 6px solid white;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  flex: none;
-  text-align: center;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  box-shadow: 0 2px 0 rgba(0,0,0,0.15) inset;
-  font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background: #00C2CB;
+    color: #00151f;
+    border: 6px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex: none;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15) inset;
 }
 
 .header-btn.app-btn:hover {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
+    filter: brightness(1.05);
+    transform: translateY(-1px);
 }
 
 .header-btn.app-btn:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
+/* Hamburger (mobile) */
 .hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  cursor: pointer;
-  flex-shrink: 0;
-  padding: 12px;
-  min-width: 48px;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 12px;
+    min-width: 48px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
 }
 
 .hamburger-menu span {
-  width: 45px;
-  height: 4.5px;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+    width: 45px;
+    height: 4.5px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-
-/* Desktop Navigation - Hidden by default */
+/* Desktop nav hidden by default (mobile-first) */
 .desktop-nav {
     display: none;
 }
@@ -214,61 +212,21 @@ a {
     display: none;
 }
 
-/* Resources dropdown hidden on mobile */
-@media (max-width:767px) {
-    .resources-dropdown {
-        display: none;
-    }
+.resources-dropdown {
+    display: none;
 }
 
-.nav-btn {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 0.95rem;
-    padding: 0.75rem 1.5rem;
-    background: white;
-    border-radius: 999px;
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.3s ease, transform 0.2s ease;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-}
-
-.nav-btn:hover {
-    background: #fff;
-    transform: translateY(-1px);
-}
-
-.nav-btn.active {
-    background: #ffdb15;
-    color: black;
-}
-
-.nav-btn.cta {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    background: #ffdb15;
-    font-weight: 700;
-    color: black;
-    padding: 1rem 2rem;
-    border: 2px solid white;
-}
-
-/* ========================
+/* ==========================================================================
    MOBILE OVERLAY MENU
-   ======================== */
+   ========================================================================== */
 
-/* Mobile Overlay with Responsive Scaling */
 .mobile-overlay {
     position: fixed;
     inset: 0;
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     display: flex;
     justify-content: center;
-    align-items: center; /* Changed from start to center for better vertical centering */
+    align-items: center;
     padding: clamp(1rem, 4vh, 3rem) 1.5rem;
     z-index: 2000;
     opacity: 0;
@@ -277,6 +235,35 @@ a {
     transition: opacity .35s ease, transform .35s ease;
     overflow-x: hidden;
     overscroll-behavior: contain;
+}
+
+.mobile-overlay::before {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    top: 260px;
+    left: 0px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+}
+
+.mobile-overlay::after {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    bottom: 60px;
+    right: 0px;
+    width: 400px;
+    height: 400px;
+    transform: scaleX(-1);
+    opacity: 0.15;
 }
 
 .mobile-overlay.open {
@@ -293,8 +280,22 @@ a {
     gap: clamp(1rem, 3vh, 2rem);
     position: relative;
     height: fit-content;
-    max-height: 85vh; /* Prevent overflow on very short screens */
+    max-height: 85vh;
     justify-content: center;
+}
+
+.overlay-content::before {
+    content: '';
+    position: absolute;
+    background: url('../images/birds3.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    top: -260px;
+    right: -180px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.05;
 }
 
 .overlay-header {
@@ -390,207 +391,9 @@ a {
     height: clamp(24px, 5vh, 30px);
 }
 
-.overlay-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.overlay-link {
-    background: #ffdb15;
-    color: black;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding: 1.4rem 2rem;
-    border: 3px solid white;
-    border-radius: 38px;
-    text-align: center;
-    display: block;
-    transition: transform .2s ease;
-}
-
-.overlay-link:hover {
-    transform: translateY(-2px);
-}
-
-.overlay-link.active {
-    background: #ffdb15;
-    color: #1f1f50;
-}
-
-.overlay-login {
-    display: inline-block;
-    width: auto;
-    padding: 0;
-    color: #ffdb15;
-    text-decoration: underline;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    cursor: pointer;
-}
 
 /* ==========================================================================
-   MAIN CONTENT SECTIONS
-   ========================================================================== */
-
-/* Typography */
-.page-title {
-    font-size: 2.5rem;
-    line-height: 1.3;
-    margin: 0 0 2rem;
-    color: white;
-    text-align: center;
-}
-
-.page-title .highlight {
-    color: #ffdb15;
-}
-
-.highlight {
-    color: #ffdb15;
-}
-
-.page-subtitle {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    margin: 0 0 3rem;
-    color: white;
-    text-align: center;
-    font-weight: 400;
-}
-
-.section-heading {
-    font-size: 2rem;
-    line-height: 1.4;
-    margin: 3rem 0 1.5rem;
-    color: white;
-}
-
-.section-heading .highlight {
-    color: #ffdb15;
-}
-
-.content-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: white;
-}
-
-.content-text a {
-    color: #ffdb15;
-    text-decoration: underline;
-}
-
-.content-text a:hover {
-    color: #fff;
-}
-
-h1 {
-    font-size: 2.6rem;
-}
-
-/* Buttons */
-.primary-button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    background: #ffdb15;
-    color: black;
-    border: 3px solid white;
-    padding: 1rem 3rem;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin: 1rem 0;
-}
-
-.primary-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    background: #ffe55c;
-    color: black;
-}
-
-.primary-button:active {
-    transform: translateY(0);
-}
-
-.secondary-button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    background: transparent;
-    color: #ffdb15;
-    border: 2px solid #ffdb15;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin: 0.5rem 0;
-}
-
-.secondary-button:hover {
-    background: #ffdb15;
-    color: black;
-    transform: translateY(-1px);
-}
-
-/* Back to Top */
-.back-to-top-container {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 500;
-}
-
-.back-to-top {
-    background-color: #ffdb15;
-    color: black;
-    border: 3px solid white;
-    border-radius: 50%;
-    font-size: 1.8rem;
-    width: 56px;
-    height: 56px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-.back-to-top:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.back-to-top-label {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-
-/* ==========================================================================
-    FOOTER STYLES
+    FOOTER (Generic + Mobile)
     ========================================================================== */
 
 .footer {
@@ -605,16 +408,17 @@ h1 {
 
 .footer-links,
 .footer-links ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-inline-start: 0;/* extra safety for Safari/iOS */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0;
 }
 
-.footer-links li { list-style: none; }
+.footer-links li {
+    list-style: none;
+}
 
 @media (max-width:767px) {
-
     .footer-columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -623,7 +427,6 @@ h1 {
         text-align: center;
     }
 
-    /* vertical divider in the middle */
     .footer-columns::before {
         content: "";
         position: absolute;
@@ -635,18 +438,40 @@ h1 {
         transform: translateX(-0.5px);
     }
 
-    /* hide Account column */
-    .footer-col.account-col { display: none; }
+    .footer-col.account-col {
+        display: none;
+    }
 
-    /* place groups to match the design */
-    .resources-col { grid-column: 1; grid-row: 1; }
-    .support-col   { grid-column: 1; grid-row: 2; }
-    .socials-col   { grid-column: 2; grid-row: 1; }
-    .legal-col     { grid-column: 2; grid-row: 2; }
+    .resources-col {
+        grid-column: 1;
+        grid-row: 1;
+    }
 
-    /* mobile sizing */
-    .footer-heading { font-size:1.7rem; margin-bottom: 1rem; color: #ffdb15; }
-    .footer-links li + li { margin-top: 1rem; }
+    .support-col {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .socials-col {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .legal-col {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .footer-heading {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        color: #ffdb15;
+    }
+
+    .footer-links li+li {
+        margin-top: 1rem;
+    }
+
     .footer-links a {
         font-size: 1.3rem;
         color: white;
@@ -690,6 +515,8 @@ h1 {
    ========================================================================== */
 
 @media (min-width: 768px) {
+
+    /* Shared page clamps */
     .header-content,
     .footer-columns,
     .footer-bottom {
@@ -700,7 +527,11 @@ h1 {
         padding-right: 2rem;
     }
 
-    /* Header Desktop Styles */
+    .why-flok-heading::before {
+        display: block;
+    }
+
+    /* Header Desktop */
     .header-buttons,
     .hamburger-menu {
         display: none;
@@ -709,7 +540,7 @@ h1 {
     .desktop-nav {
         display: flex;
         gap: 1rem;
-        margin-left: auto; /* pushes nav away from logo */
+        margin-left: auto;
         align-items: center;
     }
 
@@ -742,19 +573,29 @@ h1 {
         transition: transform 0.2s ease, background 0.25s ease;
         box-shadow: none;
     }
-    .nav-btn:hover { transform: translateY(-1px); }
 
-    /* "Get the App" — turquoise pill with white border */
+    .nav-btn:hover {
+        transform: translateY(-1px);
+    }
+
     .nav-btn.cta-app {
         background: #00C2CB;
         color: #00151f;
         font-weight: 700;
-        padding: 0.85rem 1.6rem;
+        padding: 0.75rem 1.2rem;
         border: 3px solid #fff;
         border-radius: 20px;
-        box-shadow: 0 2px 0 rgba(0,0,0,0.15) inset;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15) inset;
+        font-size: 1.2rem;
     }
-    .nav-btn.cta-app:hover { filter: brightness(1.05); }
+
+    .nav-btn.cta-app:hover {
+        filter: brightness(1.05);
+    }
+
+    .resources-dropdown {
+        display: block;
+    }
 
     /* Auth links on the far right */
     .auth-links {
@@ -764,11 +605,13 @@ h1 {
         margin-left: 0.6rem;
         font-weight: 700;
     }
+
     .auth-links a {
         color: #ffdb15;
         text-decoration: underline;
         font-weight: 400;
     }
+
     .auth-links .sep {
         opacity: 0.9;
         margin: 0 0.2rem;
@@ -784,19 +627,17 @@ h1 {
         display: inline-block;
     }
 
-    /* ===== Resources dropdown (desktop) ===== */
-
-    /* active (yellow) state for Resources button */
+    /* Resources dropdown behaviour */
     .resources-btn.is-open {
         background: #ffdb15;
         font-weight: 700;
     }
 
-    /* panel container (fixed under the header) */
     .resources-dropdown {
         position: fixed;
-        left: 0; right: 0;
-        top: 0;                    /* JS sets correct top equal to header height */
+        left: 0;
+        right: 0;
+        top: 0;
         z-index: 1500;
         transform-origin: top;
         transform: scaleY(0);
@@ -811,16 +652,14 @@ h1 {
         pointer-events: auto;
     }
 
-    /* inner block */
     .resources-inner {
         background: #1D1D40;
         padding: 3rem 0;
         position: relative;
         overflow: hidden;
-        max-height: 450px; /* adjust as you like */
+        max-height: 450px;
     }
 
-    /* width matches your header/footer clamp */
     .resources-inner,
     .resources-grid {
         margin-left: auto;
@@ -830,7 +669,6 @@ h1 {
         text-align: center;
     }
 
-    /* layout */
     .resources-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1.2fr;
@@ -838,7 +676,6 @@ h1 {
         align-items: start;
     }
 
-    /* headings + links */
     .resources-grid h3 {
         color: #ffdb15;
         font-size: 2rem;
@@ -852,7 +689,9 @@ h1 {
         padding: 0;
     }
 
-    .links-col li + li { margin-top: 1rem; }
+    .links-col li+li {
+        margin-top: 1rem;
+    }
 
     .links-col a {
         color: #fff;
@@ -860,8 +699,7 @@ h1 {
         font-size: 1.35rem;
     }
 
-    /* right image + fade */
-        .image-col .fade-wrap {
+    .image-col .fade-wrap {
         position: relative;
         overflow: hidden;
         max-width: 320px;
@@ -878,10 +716,9 @@ h1 {
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background: linear-gradient(to right, #1D1D40 0%, rgba(29,29,64,0) 60%);
+        background: linear-gradient(to right, #1D1D40 0%, rgba(29, 29, 64, 0) 60%);
     }
 
-    /* decorative dots */
     .dropdown-decor-left,
     .dropdown-decor-bottom {
         position: absolute;
@@ -904,45 +741,27 @@ h1 {
         transform: rotate(-90deg);
     }
 
-    /* Main Content Desktop */
-
-    .page-title {
-        font-size: 3rem;
-    }
-
-    .page-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .section-heading {
-        font-size: 2.3rem;
-    }
-
-    .content-text {
-        font-size: 1.1rem;
-    }
 
     /* Footer Desktop */
-    /* Footer look & spacing (match design) */
     .footer {
         background-color: #1D1D40;
         padding: 2.5rem 1.5rem 4.5rem;
     }
 
-    /* New grid layout for five columns */
     .footer-columns {
         max-width: clamp(var(--container-min), 85vw, var(--container-max));
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(5, 1fr);
         gap: 2rem 3rem;
         text-align: center;
+        align-items: start;
     }
 
-    /* Hide old divider if present */
-    .footer-divider { display: none !important; }
+    .footer-divider {
+        display: none !important;
+    }
 
-    /* Column + text styles */
     .footer-heading {
         color: #ffdb15;
         font-weight: 700;
@@ -956,7 +775,9 @@ h1 {
         margin: 0;
     }
 
-    .footer-links li + li { margin-top: 0.6rem; }
+    .footer-links li+li {
+        margin-top: 0.6rem;
+    }
 
     .footer-links a {
         color: #fff;
@@ -964,14 +785,7 @@ h1 {
         font-size: 1.1rem;
     }
 
-    /* Bottom row tweaks */
-    .footer-logo { height: 48px; }
-
-    /* Desktop: 5 equal columns */
-    @media (min-width: 768px) {
-        .footer-columns {
-            grid-template-columns: repeat(5, 1fr);
-            align-items: start;
-        }
+    .footer-logo {
+        height: 48px;
     }
 }

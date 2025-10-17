@@ -6,14 +6,23 @@
 
   if (!header || !btn || !panel) return;
 
+  const NARROW_BREAKPOINT = 1030;
+  const isNarrow = () => window.innerWidth <= NARROW_BREAKPOINT;
+
   // keep the dropdown pinned just under the header height
   function positionPanel() {
     panel.style.top = header.offsetHeight + 'px';
+
+    // If we're below the breakpoint and the panel is open, close it.
+    if (isNarrow() && panel.classList.contains('open')) {
+      closePanel();
+    }
   }
-  positionPanel();
-  window.addEventListener('resize', positionPanel);
 
   function openPanel() {
+    // If button is hidden (below breakpoint), refuse to open
+    if (isNarrow()) return;
+
     panel.classList.add('open');
     btn.classList.add('is-open');
     btn.setAttribute('aria-expanded', 'true');
@@ -42,6 +51,11 @@
   function onKeyDown(e) {
     if (e.key === 'Escape') closePanel();
   }
+
+  // Initial position + listeners
+  positionPanel();
+  window.addEventListener('resize', positionPanel, { passive: true });
+  window.addEventListener('orientationchange', positionPanel);
 
   btn.addEventListener('click', togglePanel);
 })();
