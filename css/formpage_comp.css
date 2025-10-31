@@ -32,15 +32,12 @@ html {
 html,
 body {
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    margin: 0;
     color: white;
-    min-height: 100vh;
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
 }
 
@@ -425,56 +422,53 @@ a {
 /* ————— Confirmation Page Styling ————— */
 .message-confirmation {
     color: #fff;
-    min-height: 100vh;
+    width:92vw;
+    margin:auto;
     font-family: "Poppins", sans-serif;
 }
 
 
 .message-confirmation h1 {
     margin-top: 0;
-    margin-left: 60px;
-    font-size: 4.5rem;
+    font-size: 4.1rem;
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.2rem;
+    color: white;
+    margin-bottom: 0.2rem;
 }
 
 .message-confirmation .sent-text {
-    font-size: 2.1rem;
-    margin-bottom: 1.2rem;
-    width: fit-content;
-    margin-left: 60px;
+    font-size: 1.6rem;
+    margin-bottom: 0.9rem;
+    max-width: 75%;
     margin-top: 0;
 }
 
 .message-confirmation .highlight {
     color: #ffdd33;
     font-weight: 600;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
 }
 
 .message-confirmation .follow-up {
     color: white;
-    margin-bottom: 1.2rem;
-    font-size: 2.1rem;
-    width: 1369.32px;
-    margin-left: 60px;
+    margin-bottom: 0.9rem;
+    font-size: 1.6rem;
     margin-top: 0;
+    max-width:55%;
 }
 
 .message-confirmation .return-link a {
     color: #ffdd33;
     text-decoration: underline;
     font-weight: 600;
-    font-size: 1.8rem;
-    margin-left: 60px;
+    font-size: 1.6rem;
     margin-bottom:0;
 }
 
 .message-confirmation .return-link {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-top:0;
-    margin-bottom:1.8rem;
+    margin-bottom:3rem;
 }
 
 .message-confirmation .return-link a::before {
@@ -484,26 +478,25 @@ a {
     background-size: contain;
     pointer-events: none;
     z-index: 11;
-    top: 260px;
-    right: 150px;
-    width: 300px;
-    height: 400px;
+    top: 175px;
+    right: 140px;
+    width: 360px;
+    height: 360px;
     opacity: 0.15;
 }
 /* ————— Social Media ————— */
-.social-section {
-    margin-top: 2.5rem;
+.social-section{
+    margin:auto;
+    width:fit-content;
 }
-
-.social-section p {
+.social-text {
+    width:fit-content;
+    margin:auto;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    text-align:center;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
     gap: 10rem;
     margin-bottom:0;
 }
@@ -534,35 +527,30 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 6em;
     margin-bottom: 1rem;
 }
 
 .app-icon {
-    width: 125px;
+    width: 100px;
+    opacity:0.5;
     height: auto;
 }
 
 /* ————— Footer ————— */
 .availability {
     font-size: 1.4rem;
-    color: #ccc;
-    margin-bottom: 3rem;
+    color: white;
+    margin-bottom:125px;
     text-align: center;
 }
 
 .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    font-size: 0.95rem;
+    font-size: 1.8rem;
+    padding-right:200px; 
 }
 
 .footer-links a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
+    color: lightgray;
     text-decoration: underline;
 }
