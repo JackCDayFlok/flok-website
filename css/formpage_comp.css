@@ -431,34 +431,34 @@ a {
 
 
 .message-confirmation h1 {
-    margin-top: 15px;
-    margin-left: 75px;
-    font-size: 2.5rem;
+    margin-top: 0;
+    margin-left: 60px;
+    font-size: 4.5rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1.2rem;
 }
 
 .message-confirmation .sent-text {
-    font-size: 1.6rem;
+    font-size: 2.1rem;
     margin-bottom: 1.2rem;
     width: fit-content;
-    margin-left: 75px;
+    margin-left: 60px;
     margin-top: 0;
 }
 
 .message-confirmation .highlight {
     color: #ffdd33;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 .message-confirmation .follow-up {
     color: white;
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    font-size: 2.1rem;
     width: 1369.32px;
-    margin-left: 75px;
+    margin-left: 60px;
     margin-top: 0;
 }
 
@@ -466,12 +466,15 @@ a {
     color: #ffdd33;
     text-decoration: underline;
     font-weight: 600;
-    font-size: 1.6rem;
-    margin-left: 75px;
+    font-size: 1.8rem;
+    margin-left: 60px;
+    margin-bottom:0;
 }
 
 .message-confirmation .return-link {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    margin-top:0;
+    margin-bottom:1.8rem;
 }
 
 .message-confirmation .return-link a::before {
@@ -489,7 +492,7 @@ a {
 }
 /* ————— Social Media ————— */
 .social-section {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 .social-section p {
@@ -502,11 +505,11 @@ a {
     display: flex;
     justify-content: center;
     gap: 10rem;
-    margin-bottom: 2.5rem;
+    margin-bottom:0;
 }
 
 .social-icons img {
-    width: 75px;
+    width: 80px;
     transition: transform 0.3s ease;
 }
 
