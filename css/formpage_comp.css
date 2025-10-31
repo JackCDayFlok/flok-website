@@ -90,51 +90,6 @@ a {
    MOBILE OVERLAY MENU
    ========================================================================== */
 
-.mobile-overlay {
-    position: fixed;
-    inset: 0;
-    background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: clamp(1rem, 4vh, 3rem) 1.5rem;
-    z-index: 2000;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity .35s ease, transform .35s ease;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-}
-
-.mobile-overlay::before {
-    content: '';
-    position: absolute;
-    background: url('../images/dots1.webp') no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 11;
-    top: 260px;
-    left: 0px;
-    width: 400px;
-    height: 400px;
-    opacity: 0.15;
-}
-
-.mobile-overlay::after {
-    content: '';
-    position: absolute;
-    background: url('../images/dots1.webp') no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 11;
-    bottom: 60px;
-    right: 0px;
-    width: 400px;
-    height: 400px;
-    transform: scaleX(-1);
-    opacity: 0.15;
-}
 
 .mobile-overlay.open {
     opacity: 1;
@@ -261,169 +216,51 @@ a {
     height: clamp(24px, 5vh, 30px);
 }
 
-
-/* ==========================================================================
-   DESKTOP STYLES (768px and up)
-   ========================================================================== */
-
-@media (min-width: 768px) {
-
-    /* Shared page clamps */
-    .header-content,
-    .footer-columns,
-    .footer-bottom {
-        max-width: clamp(var(--container-min), 85vw, var(--container-max));
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
+@media (max-width: 767px) {
+    .message-confirmation .sent-text {
+        font-size: 28px !important;
     }
 
-    .why-flok-heading::before {
-        display: block;
+    .message-confirmation .highlight {
+        font-size: 32px !important;
     }
 
-    /* Header Desktop */
-    .header-buttons,
-    .hamburger-menu {
-        display: none;
+    .message-confirmation .follow-up {
+        font-size:28px !important;
     }
 
-    .desktop-nav {
-        display: flex;
-        gap: 1rem;
-        margin-left: auto;
-        align-items: center;
+    .message-confirmation .return-link a {
+        font-size: 28px !important;
     }
 
-    .desktop-nav .menu-group {
-        display: flex;
-        gap: 0.8rem;
-        align-items: center;
+    .message-confirmation .return-link {
+        font-size: 28px !important;
+        margin-top: 0;
+        margin-bottom: 5rem;
     }
 
-    .header-content {
-        margin: 0 auto;
-        padding: 0 2rem;
-    }
-
-    .header-logo {
-        height: 60px;
-    }
-
-    .nav-btn {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        padding: 0.7rem 1.3rem;
-        background: #fff;
-        border-radius: 999px;
-        color: #000;
-        text-decoration: none;
-        display: inline-block;
-        border: none;
-        transition: transform 0.2s ease, background 0.25s ease;
-        box-shadow: none;
-    }
-
-    .nav-btn:hover {
-        transform: translateY(-1px);
-    }
-
-    .nav-btn.cta-app {
-        background: #00C2CB;
-        color: #00151f;
-        font-weight: 700;
-        padding: 0.75rem 1.2rem;
-        border: 3px solid #fff;
-        border-radius: 20px;
-        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15) inset;
-        font-size: 1.2rem;
-    }
-
-    .nav-btn.cta-app:hover {
-        filter: brightness(1.05);
-    }
-
-    /* Auth links on the far right */
-    .auth-links {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-        margin-left: 0.6rem;
-        font-weight: 700;
-    }
-
-    .auth-links a {
-        color: #ffdb15;
-        text-decoration: underline;
-        font-weight: 400;
-    }
-
-    .auth-links .sep {
-        opacity: 0.9;
-        margin: 0 0.2rem;
-    }
-
-    .login-link {
-        font-size: 1rem;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        color: #ffdb15;
-        text-decoration: underline;
-        margin-left: 20px;
-        display: inline-block;
-    }
-
-    .links-col ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .links-col li+li {
-        margin-top: 1rem;
-    }
-
-    .links-col a {
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.35rem;
-    }
-
-    .image-col .fade-wrap {
-        position: relative;
-        overflow: hidden;
-        max-width: 320px;
-    }
-
-    .image-col img {
-        display: block;
-        width: 300px;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .fade-left {
+    .message-confirmation .return-link a::before {
+        content: '';
         position: absolute;
-        inset: 0;
+        background: url('../images/birds4.webp') no-repeat;
+        background-size: contain;
         pointer-events: none;
-        background: linear-gradient(to right, #1D1D40 0%, rgba(29, 29, 64, 0) 60%);
-    }
-
-}
-
-@media (max-width: 1030px) {
-    #resourcesToggle {
-        display: none;
+        z-index: 11;
+        top: 300px;
+        right: 0px !important;
+        width: 360px;
+        height: 360px;
+        opacity: 0.2;
     }
 }
+
+
 
 /* ————— Confirmation Page Styling ————— */
 .message-confirmation {
     color: #fff;
-    width:92vw;
-    margin:auto;
+    width: 92vw;
+    margin: auto;
     font-family: "Poppins", sans-serif;
 }
 
@@ -433,13 +270,12 @@ a {
     font-size: 4.1rem;
     font-weight: 700;
     color: white;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .message-confirmation .sent-text {
     font-size: 2.4rem;
-    margin-bottom: 0.9rem;
-    max-width: 75%;
+    margin-bottom: 2rem;
     margin-top: 0;
 }
 
@@ -451,7 +287,7 @@ a {
 
 .message-confirmation .follow-up {
     color: white;
-    margin-bottom: 0.9rem;
+    margin-bottom: 2rem;
     font-size: 2.4rem;
     margin-top: 0;
 }
@@ -461,13 +297,13 @@ a {
     text-decoration: underline;
     font-weight: 600;
     font-size: 2.4rem;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .message-confirmation .return-link {
     font-size: 2.4rem;
-    margin-top:0;
-    margin-bottom:5rem;
+    margin-top: 0;
+    margin-bottom: 5rem;
 }
 
 .message-confirmation .return-link a::before {
@@ -477,29 +313,30 @@ a {
     background-size: contain;
     pointer-events: none;
     z-index: 11;
-    top: 175px;
-    right: 140px;
+    top: 300px;
+    right: 170px;
     width: 360px;
     height: 360px;
-    opacity: 0.15;
+    opacity: 0.2;
 }
+
 /* ————— Social Media ————— */
-.social-section{
-    margin:auto;
-    width:fit-content;
+.social-section {
+    margin: auto;
+    width: fit-content;
 }
-.social-text {
-    width:fit-content;
-    margin:auto;
+
+.social-section p {
+    text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 .social-icons {
-    display:flex;
+    display: flex;
     justify-content: center;
     gap: 10rem;
-    margin-bottom:0;
+    margin-bottom: 65px;
 }
 
 .social-icons img {
@@ -514,14 +351,14 @@ a {
 /* ————— App Links ————— */
 .app-link {
     margin-bottom: 1.5rem;
-    text-align:center;
+    text-align: center;
 }
 
 .download-link {
     color: #ffdd33;
     font-weight: 600;
     text-decoration: underline;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .app-icons {
@@ -533,25 +370,28 @@ a {
 }
 
 .app-icon {
-    width: 100px;
-    opacity:0.5;
-    height: auto;
+    width: 150px;
+    opacity: 0.5;
 }
 
 /* ————— Footer ————— */
 .availability {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: white;
-    margin-bottom:125px;
+    margin-bottom: 125px;
     text-align: center;
 }
 
 .footer-links {
     font-size: 1.8rem;
-    padding-right:200px; 
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    gap: 100px;
 }
 
 .footer-links a {
     color: lightgray;
     text-decoration: underline;
+    text-align: center;
 }
