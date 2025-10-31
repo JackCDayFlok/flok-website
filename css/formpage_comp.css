@@ -677,7 +677,7 @@ a {
 
 .message-confirmation h1 {
     margin-top:0;
-    margin-left:25px;
+    margin-left:75px;
     font-size: 4rem;
     font-weight: 700;
     color: #ffffff;
@@ -688,7 +688,7 @@ a {
     font-size: 2.1rem;
     margin-bottom: 1.2rem;
     width:fit-content;
-    margin-left:25px;
+    margin-left:75px;
     margin-top:0;
 }
 
@@ -703,7 +703,7 @@ a {
     margin-bottom: 2rem;
     font-size: 2.2rem;
     width:1369.32px;
-    margin-left:25px;
+    margin-left:75px;
     margin-top:0;
 }
 
@@ -712,7 +712,10 @@ a {
     text-decoration: none;
     font-weight: 600;
     font-size:2.1rem;
-    margin-left:25px;
+    margin-left:75px;
+}
+.message-confirmation .return-link{
+    font-size:2.2rem;
 }
 
 .message-confirmation .return-link a:hover {
