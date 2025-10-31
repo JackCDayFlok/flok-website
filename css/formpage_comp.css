@@ -32,6 +32,7 @@ html {
 html,
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -265,124 +266,6 @@ a {
 
 
 /* ==========================================================================
-    FOOTER (Generic + Mobile)
-    ========================================================================== */
-
-.footer {
-    background-color: #1D1D40;
-    color: white;
-    padding: 2rem 1.5rem 4rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    position: relative;
-    min-height: 200px;
-}
-
-.footer-links,
-.footer-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-inline-start: 0;
-}
-
-.footer-links li {
-    list-style: none;
-}
-
-@media (max-width:767px) {
-    .footer-columns {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem 3rem;
-        position: relative;
-        text-align: center;
-    }
-
-    .footer-columns::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 2px;
-        background: white;
-        transform: translateX(-0.5px);
-    }
-
-    .footer-col.account-col {
-        display: none;
-    }
-
-    .resources-col {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .support-col {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .socials-col {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .legal-col {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .footer-heading {
-        font-size: 1.7rem;
-        margin-bottom: 1rem;
-        color: #ffdb15;
-    }
-
-    .footer-links li+li {
-        margin-top: 1rem;
-    }
-
-    .footer-links a {
-        font-size: 1.3rem;
-        color: white;
-    }
-}
-
-.footer-links a {
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    position: absolute;
-    bottom: 1rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.footer-logo {
-    height: 40px;
-    width: auto;
-    margin: 0;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    margin: 0;
-    align-self: flex-end;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-
-/* ==========================================================================
    DESKTOP STYLES (768px and up)
    ========================================================================== */
 
@@ -465,10 +348,6 @@ a {
         filter: brightness(1.05);
     }
 
-    .resources-dropdown {
-        display: block;
-    }
-
     /* Auth links on the far right */
     .auth-links {
         display: flex;
@@ -497,62 +376,6 @@ a {
         text-decoration: underline;
         margin-left: 20px;
         display: inline-block;
-    }
-
-    /* Resources dropdown behaviour */
-    .resources-btn.is-open {
-        background: #ffdb15;
-        font-weight: 700;
-    }
-
-    .resources-dropdown {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        z-index: 1500;
-        transform-origin: top;
-        transform: scaleY(0);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform .28s ease, opacity .28s ease;
-    }
-
-    .resources-dropdown.open {
-        transform: scaleY(1);
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .resources-inner {
-        background: #1D1D40;
-        padding: 3rem 0;
-        position: relative;
-        overflow: hidden;
-        max-height: 450px;
-    }
-
-    .resources-inner,
-    .resources-grid {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        text-align: center;
-    }
-
-    .resources-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1.2fr;
-        gap: 3.5rem;
-        align-items: start;
-    }
-
-    .resources-grid h3 {
-        color: #ffdb15;
-        font-size: 2rem;
-        margin: 0 0 1.25rem 0;
-        font-weight: 700;
     }
 
     .links-col ul {
@@ -591,75 +414,6 @@ a {
         background: linear-gradient(to right, #1D1D40 0%, rgba(29, 29, 64, 0) 60%);
     }
 
-    .dropdown-decor-left,
-    .dropdown-decor-bottom {
-        position: absolute;
-        opacity: .25;
-        user-select: none;
-        pointer-events: none;
-    }
-
-    .dropdown-decor-left {
-        left: 0;
-        top: 1rem;
-        width: 160px;
-        height: auto;
-    }
-
-    .dropdown-decor-bottom {
-        bottom: -6rem;
-        width: 160px;
-        height: auto;
-        transform: rotate(-90deg);
-    }
-
-
-    /* Footer Desktop */
-    .footer {
-        background-color: #1D1D40;
-        padding: 2.5rem 1.5rem 4.5rem;
-    }
-
-    .footer-columns {
-        max-width: clamp(var(--container-min), 85vw, var(--container-max));
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 2rem 3rem;
-        text-align: center;
-        align-items: start;
-    }
-
-    .footer-divider {
-        display: none !important;
-    }
-
-    .footer-heading {
-        color: #ffdb15;
-        font-weight: 700;
-        font-size: 1.6rem;
-        margin: 0 0 0.8rem;
-    }
-
-    .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-links li+li {
-        margin-top: 0.6rem;
-    }
-
-    .footer-links a {
-        color: #fff;
-        font-weight: 400;
-        font-size: 1.1rem;
-    }
-
-    .footer-logo {
-        height: 48px;
-    }
 }
 
 @media (max-width: 1030px) {
@@ -675,73 +429,84 @@ a {
     font-family: "Poppins", sans-serif;
 }
 
+
 .message-confirmation h1 {
-    margin-top:0;
-    margin-left:75px;
-    font-size: 4rem;
+    margin-top: 15px;
+    margin-left: 75px;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1.2rem;
 }
 
 .message-confirmation .sent-text {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     margin-bottom: 1.2rem;
-    width:fit-content;
-    margin-left:75px;
-    margin-top:0;
+    width: fit-content;
+    margin-left: 75px;
+    margin-top: 0;
 }
 
 .message-confirmation .highlight {
     color: #ffdd33;
     font-weight: 600;
-    font-size:2.4rem;
+    font-size: 2rem;
 }
 
 .message-confirmation .follow-up {
-    color:white;
+    color: white;
     margin-bottom: 2rem;
-    font-size: 2.2rem;
-    width:1369.32px;
-    margin-left:75px;
-    margin-top:0;
+    font-size: 1.6rem;
+    width: 1369.32px;
+    margin-left: 75px;
+    margin-top: 0;
 }
 
 .message-confirmation .return-link a {
     color: #ffdd33;
-    text-decoration: none;
-    font-weight: 600;
-    font-size:2.1rem;
-    margin-left:75px;
-}
-.message-confirmation .return-link{
-    font-size:2.2rem;
-}
-
-.message-confirmation .return-link a:hover {
     text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-left: 75px;
 }
 
+.message-confirmation .return-link {
+    font-size: 1.7rem;
+}
+
+.message-confirmation .return-link a::before {
+    content: '';
+    position: absolute;
+    background: url('../images/birds4.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    top: 260px;
+    right: 150px;
+    width: 300px;
+    height: 400px;
+    opacity: 0.15;
+}
 /* ————— Social Media ————— */
 .social-section {
     margin-top: 3rem;
 }
 
 .social-section p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align:center;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 10rem;
     margin-bottom: 2.5rem;
 }
 
 .social-icons img {
-    width: 60px;
-    height: 60px;
+    width: 75px;
     transition: transform 0.3s ease;
 }
 
@@ -752,37 +517,35 @@ a {
 /* ————— App Links ————— */
 .app-link {
     margin-bottom: 1.5rem;
+    text-align:center;
 }
 
 .download-link {
     color: #ffdd33;
     font-weight: 600;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.download-link:hover {
     text-decoration: underline;
+    font-size: 1.3rem;
 }
 
 .app-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 8rem;
     margin-bottom: 1rem;
 }
 
 .app-icon {
-    width: 60px;
+    width: 125px;
     height: auto;
 }
 
 /* ————— Footer ————— */
 .availability {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #ccc;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .footer-links {
