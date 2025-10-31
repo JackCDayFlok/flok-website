@@ -371,6 +371,339 @@ a {
     height: clamp(45px, 8vh, 56px);
 }
 
+/* Built by Hospitality, for Hospitality */
+
+.built-by-hospitality {
+    margin: 10rem auto 0;
+    width: 75vw;
+    text-align: center;
+}
+
+.built-by-hospitality h2 {
+    color: #ffdb15;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hospitality-p {
+    font-size: 1.5rem;
+}
+
+.hospitality-subheading {
+    color: lightgray;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.text-section {
+    padding: 4rem 1.5rem 0;
+}
+
+.text-section::before {
+    content: '';
+    position: absolute;
+    background: url('../images/birds4.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    top: 650px;
+    right: 0px;
+    width: 600px;
+    height: 600px;
+    opacity: 0.1;
+}
+
+.text-grid {
+    max-width: clamp(var(--container-min), 85vw, var(--container-max));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+}
+
+.text-title {
+    color: #ffdb15;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    margin: 0 0 1rem;
+}
+
+.text-col p {
+    font-size: 1.3rem;
+    margin: 0 auto 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .text-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+        row-gap: 0;
+    }
+
+    .text-title {
+        min-height: 2lh;
+        /* reserve space for two title lines */
+        display: flex;
+        align-items: center;
+        /* vertical centering */
+        justify-content: center;
+        /* horizontal centering */
+        text-align: center;
+        /* keep multiline lines centered */
+    }
+}
+
+@media (max-width: 767px) {
+    .built-by-hospitality {
+        margin-top: 8rem;
+        width: 85vw;
+    }
+
+    .built-by-hospitality h2 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .built-by-hospitality h2::before {
+        content: '';
+        position: absolute;
+        background: url('../images/dots1.webp') no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 11;
+        top: 150px;
+        right: -60px;
+        width: 350px;
+        height: 350px;
+        opacity: 0.3;
+        transform: scaleX(-1);
+    }
+
+    .built-by-hospitality h2::after {
+        content: '';
+        position: absolute;
+        background: url('../images/dots1.webp') no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 11;
+        bottom: -100px;
+        left: -60px;
+        width: 350px;
+        height: 350px;
+        opacity: 0.3;
+    }
+
+    .hospitality-p {
+        font-size: 1.3rem;
+    }
+
+    .text-section {
+        padding-top: 1rem;
+    }
+
+    .text-grid {
+        gap: 1rem;
+    }
+
+    .text-section::before {
+        display: none;
+    }
+}
+
+/* What Sets Flok Apart */
+
+.what-sets-flok-apart h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: #ffdb15;
+    margin-bottom: 3rem;
+}
+
+.what-sets-flok-apart h2::before {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    bottom: -1200px;
+    right: 0px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.2;
+    transform: scaleX(-1);
+}
+
+.feature-container {
+    width: 40rem;
+    margin: auto;
+}
+
+.feature-container h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 100px;
+    color: black;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.feature-icon {
+    font-size: 3.7rem;
+}
+
+@media (max-width: 767px) {
+    .what-sets-flok-apart h2 {
+        font-size: 3rem;
+    }
+
+    .what-sets-flok-apart h2::before {
+        display: none;
+    }
+
+    .what-sets-flok-apart h2::after {
+        content: '';
+        position: absolute;
+        background: url('../images/birds2.webp') no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 11;
+        left: 0px;
+        width: 500px;
+        height: 500px;
+        opacity: 0.1;
+        transform: translateY(-450px);
+    }
+
+    .feature-container {
+        width: 90vw;
+    }
+
+    .feature-card {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ready to Transform Your Hiring? */
+
+.ready-to-transform {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80vw;
+    margin: auto;
+}
+
+.ready-to-transform h2 {
+    font-size: 4rem;
+    color: #ffdb15;
+    margin-bottom: 0;
+}
+
+.ready-to-transform h2::before {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    bottom: -1800px;
+    left: 0px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.2;
+}
+
+.button-container {
+    padding-top: 2rem;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    gap: 6rem;
+    padding-bottom: 10rem;
+}
+
+.button-container::before {
+    content: '';
+    position: absolute;
+    background: url('../images/birds4.webp') no-repeat;
+    background-size: auto;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    left: 40%;
+    width: 300px;
+    height: 300px;
+    opacity: 0.2;
+    transform: translateY(100px);
+}
+
+.button-cta {
+    background: #ffdb15;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 3px solid white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.button-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    filter: brightness(1.05);
+}
+
+@media (max-width: 767px) {
+    .ready-to-transform {
+        width: 90vw;
+        font-size: 1.3rem;
+    }
+
+    .ready-to-transform h2 {
+        font-size: 3rem;
+    }
+
+    .ready-to-transform h2::before {
+        display: none;
+    }
+
+    .button-container {
+        flex-direction: column;
+        /* stack buttons */
+        gap: 2rem;
+    }
+
+    .button-container::before {
+        background: url('../images/dots1.webp') no-repeat;
+        background-size: auto;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 0;
+        left: unset;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        opacity: 0.3;
+        transform: scaleX(-1);
+    }
+
+    .button-cta {
+        font-size: 1.8rem;
+        padding: 1.2rem 2rem;
+    }
+}
+
 .circle-arrow {
     background: #ffdb15;
     border: 3px solid white;
