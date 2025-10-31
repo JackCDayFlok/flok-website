@@ -217,6 +217,16 @@ a {
 }
 
 @media (max-width: 767px) {
+    body {
+        margin: 0 !important;
+    }
+
+    .message-confirmation {
+        width: fit-content;
+        margin: 0 !important;
+        margin-left: 10px !important;
+    }
+
     .message-confirmation .sent-text {
         font-size: 28px !important;
     }
@@ -226,7 +236,7 @@ a {
     }
 
     .message-confirmation .follow-up {
-        font-size:28px !important;
+        font-size: 28px !important;
     }
 
     .message-confirmation .return-link a {
@@ -235,23 +245,64 @@ a {
 
     .message-confirmation .return-link {
         font-size: 28px !important;
-        margin-top: 0;
-        margin-bottom: 5rem;
+        margin-bottom: 32px !important;
     }
 
     .message-confirmation .return-link a::before {
-        content: '';
-        position: absolute;
-        background: url('../images/birds4.webp') no-repeat;
-        background-size: contain;
-        pointer-events: none;
-        z-index: 11;
-        top: 300px;
         right: 0px !important;
-        width: 360px;
-        height: 360px;
-        opacity: 0.2;
     }
+
+    .social-section p {
+        text-align: center;
+        font-size: 28px !important;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 60px !important;
+        margin-left: 0 !important;
+    }
+
+    .social-icons img {
+        width: 80px !important;
+    }
+
+    .download-link {
+        text-decoration: underline;
+        font-size: 28px !important;
+    }
+
+    .availability {
+        font-size: 24px !important;
+        margin-bottom: 50px !important;
+        text-align: center;
+    }
+
+    .footer-links {
+        font-size: 28px !important;
+        text-align: center !important;
+        gap: 25px !important;
+    }
+
+    .footer-links a {
+        color: lightgray;
+        text-decoration: underline;
+        display:flex !important;
+        float: right !important;
+    }
+
+    .app-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .app-icon {
+        width: 125px !important;
+        opacity: 0.5;
+    }   
 }
 
 
