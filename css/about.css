@@ -385,6 +385,19 @@ a {
     margin: 0;
 }
 
+.built-by-hospitality h2::after {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    left: 0px;
+    width: 350px;
+    height: 350px;
+    opacity: 0.3;
+}
+
 .hospitality-p {
     font-size: 1.5rem;
 }
@@ -553,6 +566,25 @@ a {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease, transform .6s ease;
+    will-change: opacity, transform;
+}
+
+/* Applied by JS once card intersects */
+.feature-card.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .feature-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 .feature-icon {
