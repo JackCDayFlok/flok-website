@@ -40,7 +40,7 @@ body {
     margin: 0;
     color: white;
     min-height: 100vh;
-
+    background: white;
 }
 
 body.menu-open {
@@ -391,12 +391,10 @@ a {
     height: clamp(24px, 5vh, 30px);
 }
 
-
 /* Hero Section */
 
-
 .hero-section {
-    background-color: #131339;
+    background-color: #3A3A6F;
     padding: 10rem 2rem 5rem 2rem;
     text-align: center;
     display: flex;
@@ -465,286 +463,127 @@ a {
     }
 }
 
-/* Why Work With Flok Section */
-.why-work-section {
+/* Top gradient section */
+
+.top-gradient-section {
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     padding: 5rem 1.5rem;
     text-align: center;
 }
 
-.why-work-container {
+/* Why Employers Choose Flok */
+/* Why Employers Choose Flok */
+.why-flok {
     margin: 0 auto;
-}
-
-.why-work-title::before {
-    content: '';
-    position: absolute;
-    background: url('../images/birds1.webp') no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 11;
-    bottom: -900px;
-    left: 200px;
-    width: 1000px;
-    height: 1000px;
-    opacity: 0.05;
-}
-
-.why-work-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-    color: #ffdb15;
-    margin: 0;
-    line-height: 1.1;
-}
-
-.why-work-subtitle {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: white;
-    margin: 1rem 0 1rem 0;
-}
-
-.why-work-tagline {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: white;
-    margin: 0 0 3rem 0;
-}
-
-.benefits-list {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 3rem;
-    width: 90%;
-    margin: auto;
-}
-
-.benefit-card {
-    border-radius: 100px;
-    padding: 2rem 2.5rem;
-    display: flex;
-    gap: 2rem;
-    text-align: left;
-    transition: transform 0.2s ease;
     flex-direction: row;
     align-items: center;
-
-    opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    gap: 4rem;
+    padding: 0;
 }
 
-/* Visible state after scroll */
-.benefit-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .benefit-card {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-.yellow-card {
-    border: 15px solid #ffdb15;
-}
-
-.gray-card {
-    border: 15px solid #ADADAD;
-}
-
-.benefit-left {
+.why-flok-copy {
     flex: 1;
-}
-
-.benefit-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    color: #ffdb15;
-    margin: 0;
-    line-height: 1.2;
     text-align: center;
 }
 
-.benefit-right {
-    flex: 1;
-}
-
-.benefit-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: white;
-    margin: 0;
-    line-height: 1.5;
-    text-align: center;
-}
-
-@media (max-width: 767px) {
-    .why-work-title {
-        font-size: 3rem;
-    }
-
-    .why-work-title::before {
-        left: 0px;
-    }
-
-    .why-work-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .why-work-tagline {
-        font-size: 1.3rem;
-    }
-
-    .benefit-card {
-        flex-direction: column;
-    }
-
-    .benefit-title {
-        font-size: 2.5rem;
-    }
-
-    .benefit-text {
-        font-size: 1.3rem;
-    }
-}
-
-/* Roles Available */
-
-.roles-available-section {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.roles-available-section::before {
-    content: '';
-    position: absolute;
-    background: url('../images/dots1.webp') no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 11;
-    left: -50px;
-    width: 500px;
-    height: 500px;
-    opacity: 0.15;
-}
-
-.roles-content {
-    flex: 1;
-    text-align: left;
-    max-width: 600px;
-}
-
-.roles-title {
+.why-flok-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 3.5rem;
     color: #ffdb15;
-    margin: 0 0 1rem 0;
-    line-height: 1.1;
-    text-align: center;
+    margin: 0 0 2.5rem 0;
+    line-height: 1.15;
 }
 
-.roles-subtitle {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 1.6rem;
-    color: white;
-    margin: 0 0 1.5rem 0;
-    line-height: 1.4;
+.why-flok-point + .why-flok-point {
+    margin-top: 1.8rem;
 }
 
-.roles-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.roles-list li {
+.why-flok-subtitle {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.6rem;
-    color: white;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.roles-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
+    font-size: 2rem;
     color: #ffdb15;
-    font-size: 1.5em;
-    line-height: 0.8;
+    margin: 0 0 0.75rem 0;
 }
 
-.roles-image {
-    flex: 1;
-    width: 100%;
-    max-width: 600px;
+.why-flok-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.roles-image img {
+.why-flok-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 50%;
+    justify-content: flex-end;
+}
+
+.why-flok-image-placeholder {
+    background: #e5e5e5;
+    border-radius: 8px;
+    min-height: 420px;
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
+    max-width: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-flok-image-placeholder span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #000;
 }
 
 @media (max-width: 767px) {
-    .roles-available-section {
+    .why-flok {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: stretch;
+    }
+    
+    /* Make copy wrapper also use flex with column */
+    .why-flok-copy {
+        display: contents;
         flex-direction: column;
     }
-
-    .roles-content {
-        display: contents;
+    
+    /* Title comes first (order: 1) */
+    .why-flok-title {
+        order: 1;
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
-
-    .roles-title {
-        order: 0;
-    }
-
-    .roles-subtitle {
-        margin: 0;
-        font-size: 1.4rem;
+    
+    /* Image comes second (order: 2) */
+    .why-flok-visual {
         order: 2;
+        width: 80%;
+        margin: 0 auto;
     }
-
-    .roles-list {
-        text-align: left;
-        width: fit-content;
-        margin: auto;
+    
+    /* All points come after image (order: 3) */
+    .why-flok-point {
         order: 3;
     }
-
-    .roles-list li {
-        font-size: 1.4rem;
-    }
-
-    .roles-image {
-        order: 1;
-        width: 80%;
+    
+    /* Adjust spacing for first point */
+    .why-flok-point:first-of-type {
+        margin-top: 1rem;
     }
 }
 
-
-/* How It Works */
 
 /* ===== How It Works ===== */
 .how-it-works {
@@ -904,36 +743,135 @@ a {
     }
 }
 
-/* Take Control */
+/* Sectors We Cover */
 
-.take-control {
-    max-width: 1000px;
-    margin: auto;
+.sectors-we-cover {
+    background: linear-gradient(135deg, #C0C0C0 0%, #B0B3C5 50%, #D6D6E0 100%);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: black;
 }
 
-.take-control h2 {
+.sectors-we-cover h2 {
     font-size: 4rem;
-    color: #ffdb15;
-    text-align: center;
-    margin: 2rem 0;
+    margin: 0;
 }
 
-.take-control p {
-    font-size: 1.5rem;
-    text-align: center;
+.sectors-we-cover p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.sectors-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectors-container::before {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    left: -50px;
+    width: 500px;
+    height: 500px;
+    opacity: 0.15;
+}
+
+.sectors-content {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.sectors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.sectors-list li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.sectors-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: black;
+    font-size: 1.5em;
+    line-height: 0.8;
+}
+
+.sectors-image {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+}
+
+.sectors-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
 }
 
 @media (max-width: 767px) {
-    .take-control h2 {
-        font-size: 2.5rem;
+    .sectors-container {
+        flex-direction: column;
     }
 
-    .take-control p {
-        font-size: 1.3rem;
+    .sectors-content {
+        display: contents;
+    }
+
+    .sectors-list {
+        text-align: left;
+        width: fit-content;
+        margin: auto;
+        order: 3;
+    }
+
+    .sectors-list li {
+        font-size: 1.4rem;
+    }
+
+    .sectors-image {
+        order: 1;
+        width: 80%;
     }
 }
 
+/* Ready to Hire */
+.bottom-gradient-section {
+    background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
 
+.bottom-gradient-section h2 {
+    font-size: 4rem;
+    color: #ffdb15;
+    margin: 0;
+}
+
+.bottom-gradient-section p {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
 
 /* ==========================================================================
     FOOTER (Generic + Mobile)
