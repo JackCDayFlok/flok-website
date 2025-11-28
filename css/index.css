@@ -42,6 +42,10 @@ body {
     min-height: 100vh;
 }
 
+main {
+    position:relative;
+}
+
 body.menu-open {
     overflow: hidden;
     position: fixed;
@@ -91,6 +95,8 @@ a {
    HEADER (Mobile-first)
    ========================================================================== */
 
+
+
 .sticky-header {
     position: fixed;
     top: 0;
@@ -102,6 +108,8 @@ a {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     min-height: 60px;
     box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .header-content {
@@ -1999,6 +2007,7 @@ h1 {
 }
 
 @media (max-width: 767px) {
+
     .industry-speaks-heading::after,
     .industry-bottom::after {
         display: none;
