@@ -1205,7 +1205,7 @@ hr {
     }
 
     .Hospitality h1 {
-        font-size: 48px;
+        font-size: 40px;
         max-width: 100%;
     }
 
@@ -1249,40 +1249,36 @@ hr {
     }
 
     .info {
-        width: 95%;
         font-size: 19px;
     }
 
     .FineDining {
-        width: 100%;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         align-content: center;
     }
 
     .FineDining h1 {
-        font-size: 48px;
+        font-size: 40px;
         order: 0;
     }
 
     .FineDining h1::before {
-        top: 2050px;
-
+        top:unset;
+        left:150;
+        transform:scaleX(-1)translateY(940px);
     }
-
-    .FineDining .undertext {
-        order: 1;
-    }
-
     .FineDining-Content {
         width: 100%;
         display: contents;
     }
 
     .undertext {
-        margin-top: 15px;
-        max-width: 88%;
-        font-size: 28px;
+        width: 100%;
+        order: 1;
+        margin-top: 25px;
+        font-size: 24px;
     }
 
     br {
@@ -1290,7 +1286,7 @@ hr {
     }
 
     .FineDining-Content img {
-        margin-top: 25px;
+        margin-top: 40px;
         width: fit-content;
         max-width: 400px;
         order: 2;
@@ -1305,9 +1301,8 @@ hr {
     }
 
     .FineDining-Content ul li {
-        width: 100%;
+        width:84vw;
         font-size: 24px;
-        max-width: 95%;
         order: 4;
     }
 
@@ -1316,28 +1311,27 @@ hr {
     }
 
     .Pubs-Restaurants-CasualDining {
-        width: 100%;
+        width: 90vw;
         display: flex;
         flex-direction: column;
     }
 
     .Pubs-Restaurants-CasualDining h1 {
-        font-size: 48px;
+        font-size: 40px;
         order: 0;
     }
 
     .Pubs-Restaurants-CasualDining h1::before {
-        top: 3000px;
-        left: -20px;
+        top:unset;
+        transform:translateY(600px);
     }
 
     .PRCD-Content {
-        width: 100%;
         display: contents;
     }
 
     .PRCD-Content img {
-        margin-top: 25px;
+        margin-top: 40px;
         width: fit-content;
         max-width: 400px;
         align-self: center;
@@ -1345,43 +1339,42 @@ hr {
     }
 
     .PRCD-Content ul {
-        width: 100%;
         order: 3;
         text-align: left;
         padding-left: 40px;
     }
 
     .PRCD-Content ul li {
+        width:84vw;
         font-size: 24px;
-        max-width: 95%;
         order: 4;
     }
 
     .ECH {
-        width: 100%;
+        width: 90vw;
         display: flex;
         flex-direction: column;
     }
 
     .ECH h1 {
-        font-size: 48px;
+        font-size: 40px;
         order: 0;
     }
 
     .ECH h1::before {
-        top: 5380px;
-        left: 95px;
-        width: 450px;
+        top:unset;
+        transform:TranslateY(1230px)TranslateX(-60px);
+        width: 400px;
         opacity: 0.2;
     }
 
     .ECH-Content {
-        display: contents;
         width: 100%;
+        display: contents;
     }
 
     .ECH-Content img {
-        margin-top: 25px;
+        margin-top: 40px;
         width: fit-content;
         max-width: 400px;
         order: 2;
@@ -1390,27 +1383,26 @@ hr {
     }
 
     .ECH-Content ul {
-        Width: 100%;
         order: 3;
         text-align: left;
         padding-left: 40px;
     }
 
     .ECH-Content ul li {
-        font-size: 22px;
-        max-width: 100%;
+        width:84vw;
+        font-size: 24px;
         order: 4;
     }
 
     .ICC {
-        width: 100%;
+        width: 90vw;
         display: flex;
         flex-direction: column;
     }
 
     .ICC h1 {
-        max-width: 90%;
-        font-size: 48px;
+        width:100%;
+        font-size: 40px;
         order: 0;
     }
 
@@ -1424,7 +1416,7 @@ hr {
     }
 
     .ICC-Content img {
-        margin-top: 25px;
+        margin-top: 40px;
         width: fit-content;
         max-width: 400px;
         order: 2;
@@ -1432,26 +1424,24 @@ hr {
     }
 
     .ICC-Content ul {
-        width: 100%;
         order: 3;
         text-align: left;
         padding-left: 40px;
     }
 
     .ICC-Content ul li {
+        width:84vw;
         font-size: 24px;
-        max-width: 95%;
         order: 4;
     }
 
     .TSH {
-        Display: flex;
-        flex-direction: column;
-        width: 100%;
+        display:contents;
+        width: 90vw;
     }
 
     .TSH h1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .TSH h1::before {
@@ -1461,22 +1451,22 @@ hr {
         background-size: contain;
         pointer-events: none;
         z-index: 11;
-        left: 250px;
+        left: 180px;
         transform: scaleX(-1);
         width: 400px;
         height: 400px;
         opacity: 0.2;
-        top: 7025px;
+        top: 7280px;
     }
 
     .TSH ul {
-        width: 100%;
         padding-left: 40px;
     }
 
     .TSH ul li {
+        width:84vw;
         font-size: 24px;
-        max-width: 92%;
+        margin-bottom:24px;
     }
 
     .TSH-LIST-2 {
@@ -1485,12 +1475,12 @@ hr {
 
     .why-flok {
         display: flex;
-        width: 100%;
+        width: 90vw;
         flex-direction: column;
     }
 
     .why-flok h1 {
-        font-size: 48px;
+        font-size: 40px;
         order: 0;
     }
 
@@ -1501,17 +1491,17 @@ hr {
         background-size: contain;
         pointer-events: none;
         z-index: 12;
-        top: 9250px;
-        left: 55px;
+        left: 0px;
         width: 550px;
-        height: 550px;
+        height:550px;
         transform: scaleX(1);
+        transform:translateY(900px);
         opacity: 0.1;
     }
 
     .why-flok-content {
+        width:100%;
         display: contents;
-        width: 100%;
     }
 
     .why-flok-content img {
@@ -1524,14 +1514,14 @@ hr {
     }
 
     .why-flok-content ul {
-        width: 100%;
+        width:100%;
         order: 3;
         text-align: left;
     }
 
     .why-flok-content ul li {
+        width:84vw;
         font-size: 24px;
-        max-width: 95%;
         order: 4;
     }
 
@@ -1542,7 +1532,7 @@ hr {
     }
 
     .readyfor h1 {
-        font-size: 48px;
+        font-size: 40px;
         width: 100%;
         max-width: 100%;
     }
