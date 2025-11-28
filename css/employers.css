@@ -496,7 +496,7 @@ a {
     line-height: 1.15;
 }
 
-.why-flok-point + .why-flok-point {
+.why-flok-point+.why-flok-point {
     margin-top: 1.8rem;
 }
 
@@ -552,32 +552,32 @@ a {
         gap: 2rem;
         align-items: stretch;
     }
-    
+
     /* Make copy wrapper also use flex with column */
     .why-flok-copy {
         display: contents;
         flex-direction: column;
     }
-    
+
     /* Title comes first (order: 1) */
     .why-flok-title {
         order: 1;
         font-size: 3rem;
         margin-bottom: 2rem;
     }
-    
+
     /* Image comes second (order: 2) */
     .why-flok-visual {
         order: 2;
         width: 80%;
         margin: 0 auto;
     }
-    
+
     /* All points come after image (order: 3) */
     .why-flok-point {
         order: 3;
     }
-    
+
     /* Adjust spacing for first point */
     .why-flok-point:first-of-type {
         margin-top: 1rem;
@@ -613,15 +613,15 @@ a {
 .hiw-container::before {
     content: '';
     position: absolute;
-    background: url('../images/dots1.webp') no-repeat;
+    background: url('../images/birds1.webp') no-repeat;
     background-size: contain;
     pointer-events: none;
     z-index: 11;
-    right: -50px;
+    right: 50px;
     width: 500px;
     height: 500px;
     opacity: 0.15;
-    transform: scaleX(-1) translateY(-150px);
+    transform: scaleX(-1) translateY(-350px);
 }
 
 /* Stage adjusts to content height */
@@ -705,32 +705,35 @@ a {
     .how-it-works {
         margin-top: 3rem;
     }
-    
+
     .hiw-title {
         font-size: 3rem;
     }
-    
+
     .hiw-container {
         padding: 1.5rem 1rem;
     }
 
     .hiw-container::before {
-        display: none;
+        left: 0;
+        width: 600px;
+        height: 600px;
+        transform: translateY(-500px);
     }
-    
+
     .hiw-stage {
         /* Allow more breathing room on mobile */
         min-height: 220px;
     }
-    
+
     .hiw-step-title {
         font-size: 2rem;
     }
-    
+
     .hiw-step-desc {
         font-size: 1.3rem;
     }
-    
+
     .hiw-dots {
         padding-top: 1.5rem;
     }
@@ -775,13 +778,14 @@ a {
     content: '';
     position: absolute;
     background: url('../images/dots1.webp') no-repeat;
+    background-size: auto;
     background-size: contain;
     pointer-events: none;
-    z-index: 11;
+    z-index: 0;
     left: -50px;
     width: 500px;
     height: 500px;
-    opacity: 0.15;
+    opacity: 0.4;
 }
 
 .sectors-content {
@@ -830,36 +834,74 @@ a {
 }
 
 @media (max-width: 767px) {
-    .sectors-container {
+    .sectors-we-cover {
+        display: flex;
         flex-direction: column;
     }
 
-    .sectors-content {
+    .sectors-we-cover h2 {
+        font-size: 2.7rem;
+        order: 1;
+    }
+
+    .sectors-we-cover p {
+        font-size: 1.5rem;
+        order: 2;
+    }
+
+    .sectors-container {
         display: contents;
+    }
+
+    .sectors-container::before {
+        left: unset;
+        right: 0;
+        transform: scaleX(-1) translateY(500px);
+    }
+
+    .sectors-image {
+        order: 1;
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .sectors-content {
+        order: 3;
     }
 
     .sectors-list {
         text-align: left;
         width: fit-content;
         margin: auto;
-        order: 3;
     }
 
     .sectors-list li {
         font-size: 1.4rem;
     }
 
-    .sectors-image {
-        order: 1;
-        width: 80%;
-    }
 }
 
 /* Ready to Hire */
+
 .bottom-gradient-section {
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
     padding: 5rem 1.5rem;
     text-align: center;
+}
+
+
+.bottom-gradient-section::before {
+    content: '';
+    position: absolute;
+    background: url('../images/birds3.webp') no-repeat;
+    background-size: auto;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    right: -25px;
+    width: 350px;
+    height: 350px;
+    opacity: 0.1;
 }
 
 .bottom-gradient-section h2 {
@@ -871,6 +913,14 @@ a {
 .bottom-gradient-section p {
     font-size: 1.5rem;
     margin: 2rem 0;
+}
+
+@media (max-width: 767px) {
+    .bottom-gradient-section h2 {
+        font-size: 3rem;
+    }
+
+
 }
 
 /* ==========================================================================
