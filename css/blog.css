@@ -420,6 +420,11 @@ a {
     color: black;
     text-align: center;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card img {
