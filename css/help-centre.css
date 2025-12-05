@@ -642,6 +642,7 @@ a {
 
 .accordion-title {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #ffdb15;
     text-align: left;
