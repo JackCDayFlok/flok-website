@@ -466,7 +466,6 @@ a {
 
 .icons img {
     width: 125px;
-    opacity: 0.5;
 }
 
 @media (max-width: 767px) {
