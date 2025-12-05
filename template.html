@@ -6,52 +6,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index,follow">
-  <meta name="description"
-    content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+  <meta name="description" content="{{META_DESCRIPTION}}">
 
   <!-- ——————————— ABSOLUTE CANONICAL ——————————— -->
-  <link rel="canonical" href="https://www.flokjobs.com/">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
 
   <!-- ——————————— SOCIAL CARDS ——————————— -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.flokjobs.com/">
-  <meta property="og:title" content="Flok Jobs - UK Hospitality Hiring Platform">
+  <meta property="og:type" content="{{OG_TYPE}}">
+  <meta property="og:url" content="{{OG_URL}}">
+  <meta property="og:title" content="{{OG_TITLE}}">
   <meta property="og:site_name" content="Flok Jobs">
-  <meta property="og:description"
-    content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
-  <meta property="og:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta property="og:description" content="{{OG_DESCRIPTION}}">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Flok Jobs - UK Hospitality Hiring Platform">
-  <meta name="twitter:description"
-    content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
-  <meta name="twitter:image" content="https://www.flokjobs.com/images/og-home.png">
+  <meta name="twitter:title" content="{{TWITTER_TITLE}}">
+  <meta name="twitter:description" content="{{TWITTER_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{TWITTER_IMAGE_URL}}">
 
   <!-- ———————————  STRUCTURED DATA  ——————————— -->
-  <script type="application/ld+json">{
+  <script type="application/ld+json">
+  {
     "@context":"https://schema.org",
     "@type":"Organization",
     "name":"Flok Jobs",
     "url":"https://www.flokjobs.com",
     "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
     "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
-    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
-    "address":{"@type":"PostalAddress","addressCountry":"GB"}
-  }</script>
-
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://www.flokjobs.com",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://www.flokjobs.com/search?q={search_term_string}",
-      "query-input":"required name=search_term_string"
+    "sameAs":[
+      "https://www.facebook.com/people/Flok-Jobs/61576512420509",
+      "https://www.linkedin.com/company/flokjobs",
+      "https://www.instagram.com/flokjobs"
+    ],
+    "address":{
+      "@type":"PostalAddress",
+      "addressCountry":"GB"
     }
-  }</script>
+  }
+  </script>
 
   <!-- ———————————  PWA / THEME  ——————————— -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -64,17 +60,17 @@
   <!-- ———————————  PRELOADING ——————————— -->
   <link rel="preload" as="image" href="/images/silverbackground1.svg" type="image/svg+xml" media="(max-width: 767px)">
   <link rel="preload" as="image" href="/images/silverbackground2.svg" type="image/svg+xml" media="(min-width: 768px)">
-
-  <link rel="preload" as="font" href="/fonts/Poppins-Regular.ttf" type="font/ttf" crossorigin>
-  <link rel="preload" as="font" href="/fonts/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Poppins-Regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Poppins-Bold.woff2" type="font/woff2" crossorigin>
 
   <!-- —————————————————  ASSETS  ————————————————— -->
-  <title>Flok Jobs - UK Hospitality Hiring Platform</title>
-  <link rel="icon" href="images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon48.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon192.png">
+  <title>{{PAGE_TITLE}}</title>
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon192.png">
   <link rel="stylesheet" href="css/template.css">
 </head>
+
 
 <body>
 
@@ -274,9 +270,9 @@
 
 </body>
 
-  <!-- JavaScript -->
-  <script src="js/overlay-menu.js"></script>
-  <script src="js/back-to-top.js"></script>
-  <script src="js/resources-dropdown.js"></script>
+<!-- JavaScript -->
+<script src="js/overlay-menu.js"></script>
+<script src="js/back-to-top.js"></script>
+<script src="js/resources-dropdown.js"></script>
 
 </html>
