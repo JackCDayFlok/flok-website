@@ -387,6 +387,394 @@ a {
     height: clamp(24px, 5vh, 30px);
 }
 
+/* Main Section */
+
+.main-section {
+    width: 75vw;
+    margin: 2rem auto 0;
+    padding-bottom: 5rem;
+}
+
+.main-section a img {
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #ffdb15;
+    font-size: 4.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    top: -20px;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+    transform: scaleX(-1)
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    background: url('../images/dots1.webp') no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 11;
+    top: 260px;
+    left: 0px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 0;
+    font-size: 3.7rem;
+    color: #ffdb15;
+    margin-bottom: 2.2rem;
+}
+
+.infoText {
+    text-align: center;
+}
+
+.infoText p {
+    max-width: 1300px;
+    margin: auto;
+    font-size: 1.8rem;
+    margin-bottom: 70px;
+}
+
+.main-form label {
+    color: #ffdb15;
+    font-size: 2rem;
+}
+
+.main-form input {
+    display: flex;
+    width: 100%;
+    padding: 15px 0px 15px 15px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 48px;
+    font-size: 24px;
+    margin: 1rem 0 2rem;
+}
+
+.main-form input::placeholder {
+    padding-left: 25px;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+.help-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* spacing between rows */
+}
+
+.help-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    /* adjust if needed */
+    gap: 12px;
+    font-size: 24px;
+}
+
+.help-option input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+    position: relative;
+}
+
+.help-option input[type="checkbox"]:checked {
+    background-color: white;
+}
+
+.help-option input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: -1px;
+    width: 12px;
+    height: 22px;
+    border: solid #000000;
+    border-width: 0 4px 4px 0;
+    transform: rotate(40deg);
+}
+
+.form-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-weight: 700;
+    color: #ffdd2d;
+    font-size: 32px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 100%;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 12px;
+    padding: 18px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    resize: none;
+    min-height: 140px;
+    box-sizing: border-box;
+}
+
+.contact-heading {
+    color: #ffdd2d;
+    font-size: 48px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-heading::before {
+    content: '';
+    position: absolute;
+    background: url('../images/birds2.webp') no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 11;
+    top: 1750px;
+    right: 200px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+}
+
+.required-note {
+    color: #ffdd2d;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.help-option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background: #ffffff;
+    /* <-- make the box white */
+    cursor: pointer;
+    position: relative;
+}
+
+/* Checked state */
+.help-option input[type="radio"]:checked {
+    background-color: #fff;
+}
+
+.help-option input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: -1px;
+    width: 12px;
+    height: 22px;
+    border: solid #000000;
+    /* dark blue checkmark */
+    border-width: 0 4px 4px 0;
+    transform: rotate(40deg);
+}
+
+.submit-wrapper {
+    text-align: center;
+    margin-top: 3rem 0;
+}
+
+.submit-btn {
+    background: #ffdb15;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    padding: 18px 55px;
+    border: 2px solid white;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+}
+
+#MobileOnlyText1 {
+    display: none;
+}
+
+#MobileOnlyText2 {
+    display: none;
+}
+
+/* Form page complete */
+
+.sent-section {
+    font-size: 1.8rem;
+}
+
+.message-sent {
+    color: #ffdb15;
+    font-size: 2.2rem;
+}
+
+.social-section p {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.social-icons, .app-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-icons a img {
+    height: 120px;
+}
+
+.app-link {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.app-icons a {
+    cursor: default;
+}
+
+.app-icons a img {
+    opacity: 0.5;
+    height: 150px;
+}
+
+.app-availability {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.policy-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin-top: 125px;
+    text-align: center;
+}
+
+.policy-links a {
+    color: #B8B8B8;
+    width: fit-content;
+    margin: auto;
+}
+
+@media(max-width:767px) {
+
+    .main-section {
+        width: 90vw;
+    }
+
+    .main-section h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .infoText {
+        margin: 1rem 0;
+    }
+
+    .infoText p {
+        font-size: 1.5rem;
+    }
+
+    .main-form {
+        font-size: 1.5rem;
+    }
+
+    .help-option {
+        font-size: 1.2rem
+    }
+
+    .contact-heading::before {
+        content: '';
+        position: absolute;
+        background: url('../images/birds2.webp') no-repeat;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 11;
+        top: 1800px;
+        right: 0px;
+        width: 175px;
+        height: 205px;
+        opacity: 0.4;
+    }
+
+
+    .sent-section {
+        font-size: 1.5rem;
+    }
+
+    .social-section p {
+        font-size: 1.8rem;
+    }
+    
+    .social-icons a img {
+        height: 80px;
+    }
+
+    .app-link {
+        font-size: 1.8rem;
+    }
+
+    .app-icons a img {
+        height: 120px;
+    }
+
+    .app-availability {
+        font-size: 1.5rem;
+    }
+
+    .policy-links {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 3.5rem;
+    }
+
+}
+
 
 /* ==========================================================================
     FOOTER (Generic + Mobile)
@@ -730,299 +1118,5 @@ a {
 @media (max-width: 1030px) {
     #resourcesToggle {
         display: none;
-    }
-}
-
-.main-section {
-    width: 75vw;
-    margin: 2rem auto 0;
-    padding-bottom: 5rem;
-}
-
-.main-section a img {
-    height: 4rem;
-    margin-bottom: 2rem;
-}
-
-h1 {
-    text-align: center;
-    color: #ffdb15;
-    font-size: 4.5rem;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-h1::before {
-    content: '';
-    position: absolute;
-    background: url('../images/dots1.webp') no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 11;
-    top: -20px;
-    right: 0;
-    width: 400px;
-    height: 400px;
-    opacity: 0.15;
-    transform: scaleX(-1)
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    background: url('../images/dots1.webp') no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 11;
-    top: 260px;
-    left: 0px;
-    width: 400px;
-    height: 400px;
-    opacity: 0.15;
-}
-
-.subtitle {
-    text-align: center;
-    margin-top: 0;
-    font-size: 56px;
-    color: #ffdb15;
-    margin-bottom: 2.2rem;
-}
-
-.infoText {
-    text-align: center;
-}
-
-.infoText p {
-    max-width: 1300px;
-    margin: auto;
-    font-size: 30px;
-    margin-bottom: 70px;
-}
-
-.main-form label {
-    color: #ffdb15;
-    font-size: 2rem;
-}
-
-.main-form input {
-    display: flex;
-    width: 100%;
-    padding: 15px 0px 15px 15px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 48px;
-    font-size: 24px;
-    margin: 1rem 0 2rem;
-}
-
-.main-form input::placeholder {
-    padding-left: 25px;
-    font-family: 'Poppins';
-    font-weight: 700;
-}
-
-.help-boxes {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    /* spacing between rows */
-}
-
-.help-option {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    color: #ffffff;
-    /* adjust if needed */
-    gap: 12px;
-    font-size: 24px;
-}
-
-.help-option input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 33px;
-    height: 33px;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    background: #ffffff;
-    cursor: pointer;
-    position: relative;
-}
-
-.help-option input[type="checkbox"]:checked {
-    background-color: white;
-}
-
-.help-option input[type="checkbox"]:checked::after {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: -1px;
-    width: 12px;
-    height: 22px;
-    border: solid #000000;
-    border-width: 0 4px 4px 0;
-    transform: rotate(40deg);
-}
-
-.form-group {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.form-label {
-    font-weight: 700;
-    color: #ffdd2d;
-    font-size: 32px;
-}
-
-textarea {
-    margin-top: 10px;
-    width: 100%;
-    background: #fff;
-    color: #333;
-    border: none;
-    border-radius: 12px;
-    padding: 18px;
-    font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    resize: none;
-    min-height: 140px;
-    box-sizing: border-box;
-}
-
-.contact-heading {
-    color: #ffdd2d;
-    font-size: 48px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-.contact-heading::before {
-    content: '';
-    position: absolute;
-    background: url('../images/birds2.webp') no-repeat;
-    background-size: cover;
-    pointer-events: none;
-    z-index: 11;
-    top: 1750px;
-    right: 200px;
-    width: 400px;
-    height: 400px;
-    opacity: 0.15;
-}
-
-.required-note {
-    color: #ffdd2d;
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-.help-option input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 33px;
-    height: 33px;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    background: #ffffff;
-    /* <-- make the box white */
-    cursor: pointer;
-    position: relative;
-}
-
-/* Checked state */
-.help-option input[type="radio"]:checked {
-    background-color: #fff;
-}
-
-.help-option input[type="radio"]:checked::after {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: -1px;
-    width: 12px;
-    height: 22px;
-    border: solid #000000;
-    /* dark blue checkmark */
-    border-width: 0 4px 4px 0;
-    transform: rotate(40deg);
-}
-
-.submit-wrapper {
-    text-align: center;
-    margin-top: 3rem 0;
-}
-
-.submit-btn {
-    background: #ffdb15;
-    color: #000;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    padding: 18px 55px;
-    border: 2px solid white;
-    border-radius: 999px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: all 0.25s ease;
-}
-
-#MobileOnlyText1 {
-    display: none;
-}
-
-#MobileOnlyText2 {
-    display: none;
-}
-
-@media(max-width:767px) {
-
-    .main-section {
-        width: 90vw;
-    }
-
-    .main-section h1 {
-        font-size: 3rem;
-    }
-
-    .subtitle {
-        font-size: 2rem;
-    }
-
-    .infoText {
-        margin: 1rem 0;
-    }
-
-    .infoText p {
-        font-size: 1.5rem;
-    }
-
-    .main-form {
-        font-size: 1.5rem;
-    }
-
-    .help-option {
-        font-size: 1.2rem
-    }
-
-    .contact-heading::before {
-        content: '';
-        position: absolute;
-        background: url('../images/birds2.webp') no-repeat;
-        background-size: cover;
-        pointer-events: none;
-        z-index: 11;
-        top: 1800px;
-        right: 0px;
-        width: 175px;
-        height: 205px;
-        opacity: 0.4;
     }
 }
