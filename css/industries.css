@@ -1525,12 +1525,13 @@ hr {
     }
 
     .why-flok-content ul {
-        width:95%;
+        width:85%;
         order: 3;
         text-align: left;
     }
 
     .why-flok-content ul li{
+        width:100%;
         font-size: 24px;
         order: 4;
     }
