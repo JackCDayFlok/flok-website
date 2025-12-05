@@ -1511,7 +1511,7 @@ hr {
     }
 
     .why-flok-content {
-        width: 100%;
+        width: 97%;
         display: contents;
     }
 
@@ -1525,13 +1525,12 @@ hr {
     }
 
     .why-flok-content ul {
-        width: 100%;
+        width:95%;
         order: 3;
         text-align: left;
     }
 
-    .why-flok-content ul li {
-        width: 84vw;
+    .why-flok-content ul li{
         font-size: 24px;
         order: 4;
     }
