@@ -7,51 +7,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
     <meta name="description"
-        content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+        content="Download the Flok Jobs app for iOS and Android to find hospitality shifts or hire verified staff in real time across the UK.">
 
     <!-- ——————————— ABSOLUTE CANONICAL ——————————— -->
-    <link rel="canonical" href="https://www.flokjobs.com/">
+    <link rel="canonical" href="https://www.flokjobs.com/app">
 
     <!-- ——————————— SOCIAL CARDS ——————————— -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.flokjobs.com/">
-    <meta property="og:title" content="Flok Jobs - UK Hospitality Hiring Platform">
+    <meta property="og:url" content="https://www.flokjobs.com/app">
+    <meta property="og:title" content="Get the Flok Jobs App - Hire or Find Hospitality Shifts">
     <meta property="og:site_name" content="Flok Jobs">
     <meta property="og:description"
-        content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+        content="Download the Flok Jobs app for iOS and Android to post hospitality shifts, find work and manage bookings in real time across the UK.">
     <meta property="og:image" content="https://www.flokjobs.com/images/og-home.png">
     <meta property="og:locale" content="en_GB">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Flok Jobs mobile app screen showing UK hospitality shifts and hiring tools">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Flok Jobs - UK Hospitality Hiring Platform">
+    <meta name="twitter:title" content="Get the Flok Jobs App - Hire or Find Hospitality Shifts">
     <meta name="twitter:description"
-        content="The UK's only direct way to hire and get hired in hospitality — fast, flexible and real-time. Sign up now for exclusive early access.">
+        content="Install the Flok Jobs app on iOS or Android to book shifts or hire hospitality staff in just a few taps.">
     <meta name="twitter:image" content="https://www.flokjobs.com/images/og-home.png">
 
     <!-- ———————————  STRUCTURED DATA  ——————————— -->
-    <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Flok Jobs",
-    "url":"https://www.flokjobs.com",
-    "logo":"https://www.flokjobs.com/images/flokjobs-logo.png",
-    "description":"UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
-    "sameAs":["https://www.facebook.com/people/Flok-Jobs/61576512420509", "https://www.linkedin.com/company/flokjobs","https://www.instagram.com/flokjobs"],
-    "address":{"@type":"PostalAddress","addressCountry":"GB"}
-  }</script>
-
-    <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://www.flokjobs.com",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://www.flokjobs.com/search?q={search_term_string}",
-      "query-input":"required name=search_term_string"
+    <!-- Organization (shared across site) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Flok Jobs",
+    "url": "https://www.flokjobs.com",
+    "logo": "https://www.flokjobs.com/images/flokjobs-logo.png",
+    "description": "UK's leading hospitality recruitment platform connecting venues with verified chefs, bar staff, waiters and hospitality professionals.",
+    "sameAs": [
+      "https://www.facebook.com/people/Flok-Jobs/61576512420509",
+      "https://www.linkedin.com/company/flokjobs",
+      "https://www.instagram.com/flokjobs"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
     }
-  }</script>
+  }
+  </script>
+
+    <!-- Mobile app listing -->
+    <!-- TODO: Update app links -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Flok Jobs",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://www.flokjobs.com/app",
+    "downloadUrl": [
+      "https://apps.apple.com/gb/app/YOUR-APP-ID",
+      "https://play.google.com/store/apps/details?id=YOUR.PACKAGE.NAME"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Flok Jobs"
+    }
+  }
+  </script>
 
     <!-- ———————————  PWA / THEME  ——————————— -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -62,14 +88,11 @@
     <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
     <!-- ———————————  PRELOADING ——————————— -->
-    <link rel="preload" as="image" href="/images/silverbackground1.svg" type="image/svg+xml" media="(max-width: 767px)">
-    <link rel="preload" as="image" href="/images/silverbackground2.svg" type="image/svg+xml" media="(min-width: 768px)">
-
-    <link rel="preload" as="font" href="/fonts/Poppins-Regular.ttf" type="font/ttf" crossorigin>
-    <link rel="preload" as="font" href="/fonts/Poppins-Bold.ttf" type="font/ttf" crossorigin>
+    <link rel="preload" as="font" href="/fonts/Poppins-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/Poppins-Bold.woff2" type="font/woff2" crossorigin>
 
     <!-- —————————————————  ASSETS  ————————————————— -->
-    <title>Flok Jobs - UK Hospitality Hiring Platform</title>
+    <title>Get the Flok Jobs App - iOS & Android | Flok Jobs</title>
     <link rel="icon" href="images/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="48x48" href="images/favicon48.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/favicon192.png">
