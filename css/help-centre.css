@@ -43,6 +43,10 @@ body {
     background: linear-gradient(to bottom, #1f1f50, #3a3a6f);
 }
 
+main {
+    position: relative;
+}
+
 body.menu-open {
     overflow: hidden;
     position: fixed;

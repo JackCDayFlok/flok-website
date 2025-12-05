@@ -49,6 +49,10 @@ body.menu-open {
     width: 100%;
 }
 
+main {
+    position: relative;
+}
+
 :root {
     --container-min: 1200px;
     --container-max: 1600px;
@@ -483,10 +487,10 @@ a {
     background-size: contain;
     pointer-events: none;
     z-index: 11;
-    bottom: -900px;
+    top: 600px;
     left: 200px;
     width: 1000px;
-    height: 1000px;
+    height: 420px;
     opacity: 0.05;
 }
 

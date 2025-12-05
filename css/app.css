@@ -50,6 +50,10 @@ body.menu-open {
     width: 100%;
 }
 
+main {
+    position: relative;
+}
+
 :root {
     --container-min: 1200px;
     --container-max: 1600px;
