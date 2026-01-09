@@ -1963,9 +1963,14 @@ h1 {
     max-width: 70%;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
     opacity: 0;
     transform: translateY(30px);
+
     transition: opacity .6s ease, transform .6s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    /* ✅ key line */
+    will-change: opacity, transform;
 }
 
 .quote-bubble.visible {
