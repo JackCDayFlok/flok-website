@@ -538,7 +538,11 @@ h1::after {
 .form-label {
     font-weight: 700;
     color: #ffdd2d;
-    font-size: 32px;
+    font-size: 2rem;
+}
+
+#contact-method-wrapper {
+    margin-top: 40px;
 }
 
 textarea {
@@ -557,30 +561,23 @@ textarea {
     box-sizing: border-box;
 }
 
-.contact-heading {
-    color: #ffdd2d;
-    font-size: 48px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
 .contact-heading::before {
     content: '';
     position: absolute;
     background: url('../images/birds2.webp') no-repeat;
     background-size: cover;
     pointer-events: none;
-    z-index: 11;
-    top: 1750px;
-    right: 200px;
+    z-index: 1;
+    right: 50px;
     width: 400px;
     height: 400px;
     opacity: 0.15;
+    transform: translateY(-50px);
 }
 
 .required-note {
     color: #ffdd2d;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-top: 20px;
 }
 
@@ -630,7 +627,7 @@ textarea {
     border: 2px solid white;
     border-radius: 999px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     transition: all 0.25s ease;
 }
 
@@ -736,9 +733,9 @@ textarea {
         background: url('../images/birds2.webp') no-repeat;
         background-size: cover;
         pointer-events: none;
-        z-index: 11;
-        top: 1800px;
+        z-index: 1;
         right: 0px;
+        transform: translateY(100px);
         width: 175px;
         height: 205px;
         opacity: 0.4;
