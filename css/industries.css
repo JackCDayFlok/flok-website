@@ -887,6 +887,7 @@ hr {
     display: flex;
     height: fit-content;
     align-items: center;
+    gap: 30px;
 }
 
 .FineDining-Content ul {
@@ -900,7 +901,7 @@ hr {
 }
 
 .FineDining-Content img {
-    height: 550px;
+    height: 100%;
 }
 
 .FineDining h1::before {
@@ -946,7 +947,7 @@ hr {
 }
 
 .PRCD-Content img {
-    width: 700px;
+    width: 100%;
 }
 
 .Pubs-Restaurants-CasualDining h1::before {
@@ -992,6 +993,7 @@ hr {
     display: flex;
     height: fit-content;
     align-items: center;
+    gap: 30px;
 }
 
 .ECH-Content ul {
@@ -1006,7 +1008,7 @@ hr {
 }
 
 .ECH-Content img {
-    width: 700px;
+    width: 100%;
 }
 
 .ICC {
@@ -1055,7 +1057,7 @@ hr {
 }
 
 .ICC-Content img {
-    height: 500px;
+    height: 100%;
 }
 
 .TSH {
@@ -1116,7 +1118,8 @@ hr {
 
 .why-flok-content {
     display: flex;
-    align-items: Center;
+    align-items: center;
+    gap: 30px;
 }
 
 .why-flok-content ul {
@@ -1135,10 +1138,9 @@ hr {
 }
 
 .why-flok-content img {
-    height: 550px;
+    width: 100%;
+    max-width: 450px;
     align-self: center;
-    margin-left: 200px;
-    margin-top: 40px;
 }
 
 .readyfor {
