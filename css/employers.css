@@ -535,6 +535,7 @@ a {
 .why-flok-image-placeholder {
     background: #e5e5e5;
     border-radius: 8px;
+    min-height: 420px;
     width: 100%;
     max-width: 620px;
     display: flex;
@@ -1187,7 +1188,7 @@ a {
     }
 
     .resources-inner {
-        background: #1D1D40;
+        background: rgba(0, 0, 0, 0.9);
         padding: 3rem 0;
         position: relative;
         overflow: hidden;
@@ -1205,7 +1206,7 @@ a {
 
     .resources-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1.2fr;
+        grid-template-columns: 1fr 1fr 2fr;
         gap: 3.5rem;
         align-items: start;
     }
@@ -1256,7 +1257,7 @@ a {
     .dropdown-decor-left,
     .dropdown-decor-bottom {
         position: absolute;
-        opacity: .25;
+        opacity: .1;
         user-select: none;
         pointer-events: none;
     }

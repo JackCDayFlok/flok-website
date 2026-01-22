@@ -2396,7 +2396,7 @@ h1 {
     }
 
     .resources-inner {
-        background: #1D1D40;
+        background: rgba(0, 0, 0, 0.9);
         padding: 3rem 0;
         position: relative;
         overflow: hidden;
@@ -2414,7 +2414,7 @@ h1 {
 
     .resources-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1.2fr;
+        grid-template-columns: 1fr 1fr 2fr;
         gap: 3.5rem;
         align-items: start;
     }
@@ -2465,7 +2465,7 @@ h1 {
     .dropdown-decor-left,
     .dropdown-decor-bottom {
         position: absolute;
-        opacity: .25;
+        opacity: .1;
         user-select: none;
         pointer-events: none;
     }
