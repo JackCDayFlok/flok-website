@@ -407,7 +407,7 @@ a {
     margin: auto;
 }
 
-.text-container h2 { 
+.text-container h2 {
     font-size: 2.5rem;
 }
 
@@ -774,6 +774,11 @@ a {
         color: #fff;
         font-weight: 700;
         font-size: 1.35rem;
+    }
+
+    .image-col {
+        display: flex;
+        justify-content: center;
     }
 
     .image-col .fade-wrap {

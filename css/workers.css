@@ -538,22 +538,22 @@ a {
     align-items: center;
 
     opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Visible state after scroll */
 .benefit-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .benefit-card {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+    .benefit-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 .yellow-card {
@@ -869,11 +869,11 @@ a {
     .how-it-works {
         margin-top: 3rem;
     }
-    
+
     .hiw-title {
         font-size: 3rem;
     }
-    
+
     .hiw-container {
         padding: 1.5rem 1rem;
     }
@@ -881,20 +881,20 @@ a {
     .hiw-container::before {
         display: none;
     }
-    
+
     .hiw-stage {
         /* Allow more breathing room on mobile */
         min-height: 220px;
     }
-    
+
     .hiw-step-title {
         font-size: 2rem;
     }
-    
+
     .hiw-step-desc {
         font-size: 1.3rem;
     }
-    
+
     .hiw-dots {
         padding-top: 1.5rem;
     }
@@ -1243,6 +1243,11 @@ a {
         color: #fff;
         font-weight: 700;
         font-size: 1.35rem;
+    }
+
+    .image-col {
+        display: flex;
+        justify-content: center;
     }
 
     .image-col .fade-wrap {

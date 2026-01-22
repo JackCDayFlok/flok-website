@@ -702,6 +702,11 @@ a {
         font-size: 1.35rem;
     }
 
+    .image-col {
+        display: flex;
+        justify-content: center;
+    }
+
     .image-col .fade-wrap {
         position: relative;
         overflow: hidden;
@@ -881,20 +886,21 @@ h1::after {
         font-size: 32px;
     }
 
-    .body{
-        width:fit-content;
+    .body {
+        width: fit-content;
         overflow-x: hidden;
     }
-    .BTN_CONT{
-        display:flex;
+
+    .BTN_CONT {
+        display: flex;
         flex-direction: column;
     }
 
     .BTN_CONT a {
-        margin:auto;
-        width:fit-content;
-        font-size:24px;
-        padding:24px;
+        margin: auto;
+        width: fit-content;
+        font-size: 24px;
+        padding: 24px;
     }
 
     h1::before {
@@ -906,11 +912,11 @@ h1::after {
     }
 
     .BTN_CONT a::Before {
-        position:absolute;
-        background-size:contain;
-        left:75px;
+        position: absolute;
+        background-size: contain;
+        left: 75px;
         top: 890px;
-        width:300px;
+        width: 300px;
         opacity: 0.1;
     }
 

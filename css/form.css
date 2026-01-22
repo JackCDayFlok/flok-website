@@ -655,7 +655,8 @@ textarea {
     margin: 50px 0;
 }
 
-.social-icons, .app-icons {
+.social-icons,
+.app-icons {
     display: flex;
     justify-content: space-evenly;
 }
@@ -748,7 +749,7 @@ textarea {
     .social-section p {
         font-size: 1.8rem;
     }
-    
+
     .social-icons a img {
         height: 80px;
     }
@@ -1021,6 +1022,11 @@ textarea {
         color: #fff;
         font-weight: 700;
         font-size: 1.35rem;
+    }
+
+    .image-col {
+        display: flex;
+        justify-content: center;
     }
 
     .image-col .fade-wrap {

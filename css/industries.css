@@ -86,7 +86,7 @@ a {
 
 #main-content {
     scroll-margin-top: 96px;
-    margin-bottom:96px;
+    margin-bottom: 96px;
 }
 
 .main-section {
@@ -706,6 +706,11 @@ a {
         font-size: 1.35rem;
     }
 
+    .image-col {
+        display: flex;
+        justify-content: center;
+    }
+
     .image-col .fade-wrap {
         position: relative;
         overflow: hidden;
@@ -981,7 +986,7 @@ hr {
     background-size: contain;
     pointer-events: none;
     z-index: 20;
-    right:-13px;
+    right: -13px;
     width: 400px;
     height: 400px;
     transform: scaleX(1)translateY(60px);
@@ -1036,7 +1041,7 @@ hr {
 }
 
 .ICC-Content {
-    width:80%;
+    width: 80%;
     Display: flex;
     margin: auto;
     height: fit-content;
@@ -1178,10 +1183,12 @@ hr {
 }
 
 @media(max-width:767px) {
+
     ul,
     li {
         width: unset !important;
     }
+
     .main-section {
         padding: 0px;
         padding-top: 100px;
@@ -1340,7 +1347,7 @@ hr {
     }
 
     .ECH h1::before {
-        transform:TranslateY(1381px)TranslateX(-6px);
+        transform: TranslateY(1381px)TranslateX(-6px);
         width: 400px;
         opacity: 0.2;
     }

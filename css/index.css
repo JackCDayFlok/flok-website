@@ -2441,6 +2441,11 @@ h1 {
         font-size: 1.35rem;
     }
 
+    .image-col {
+        display: flex;
+        justify-content: center;
+    }
+
     .image-col .fade-wrap {
         position: relative;
         overflow: hidden;
