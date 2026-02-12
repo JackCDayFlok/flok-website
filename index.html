@@ -771,8 +771,7 @@
           <h2 class="post-match-title">Post. Match. Go.</h2>
           <p class="post-match-subtitle">Find staff or shifts in 3 simple steps. No agencies. No hassle. Just work that
             works.</p>
-
-          <!-- Replace the two sibling blocks with this wrapper INSIDE .post-match-go -->
+          
           <div class="post-match-row">
 
             <div class="post-match-left">
@@ -2279,7 +2278,7 @@
           if (started) return;
           started = true;
           setActive(0); // start at step 1 on first view
-          timer = setInterval(advance, 3500);
+          timer = setInterval(advance, 2500);
         }
 
         // Start once when section enters the viewport
@@ -2300,7 +2299,7 @@
           if (document.hidden) {
             if (timer) { clearInterval(timer); timer = null; }
           } else if (!timer) {
-            timer = setInterval(advance, 3500);
+            timer = setInterval(advance, 2500);
           }
         });
       })();

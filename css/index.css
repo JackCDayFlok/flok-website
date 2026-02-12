@@ -1160,7 +1160,7 @@ h1 {
     height: 100%;
     object-fit: contain;
     opacity: 0;
-    transition: opacity .35s ease;
+    transition: opacity .25s ease;
     display: block;
 }
 
@@ -1239,7 +1239,7 @@ h1 {
 
 /* —— FlokAI (generic baseline; grid moves to desktop) —— */
 .flokai {
-    padding: 4rem 1.5rem 6rem;
+    padding: 4rem 1.5rem 0;
     color: #fff;
     position: relative;
 }
