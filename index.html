@@ -809,7 +809,7 @@
 
             <div class="post-match-right">
               <div class="post-match-image">
-                <img class="pmg-img is-visible" src="images/postmatch1.png" alt="Woman sitting at computer">
+                <img class="pmg-img is-visible" src="images/postmatch1.jpg" alt="Man sitting at computer">
                 <img class="pmg-img" src="" alt="" aria-hidden="true">
               </div>
             </div>
@@ -2227,7 +2227,7 @@
         if (imgs.length < 2) return;
 
         const sources = [
-          'images/postmatch11.jpg',
+          'images/postmatch1.jpg',
           'images/postmatch2.jpg',
           'images/postmatch3.jpg'
         ];
@@ -2279,7 +2279,7 @@
           if (started) return;
           started = true;
           setActive(0); // start at step 1 on first view
-          timer = setInterval(advance, 2500);
+          timer = setInterval(advance, 2000);
         }
 
         // Start once when section enters the viewport
@@ -2300,7 +2300,7 @@
           if (document.hidden) {
             if (timer) { clearInterval(timer); timer = null; }
           } else if (!timer) {
-            timer = setInterval(advance, 2500);
+            timer = setInterval(advance, 2000);
           }
         });
       })();
