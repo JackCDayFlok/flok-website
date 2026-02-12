@@ -658,7 +658,10 @@ h1 {
         display: block;
     }
 
-    /* force line break */
+    /* Hide line break on mobile */
+    .hero-title-break {
+        display: block;
+    }
     .hero-accent {
         color: #ffdb15;
     }
