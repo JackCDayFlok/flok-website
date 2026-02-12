@@ -475,7 +475,6 @@ a {
 }
 
 /* Why Employers Choose Flok */
-/* Why Employers Choose Flok */
 .why-flok {
     margin: 0 auto;
     display: flex;
@@ -524,11 +523,8 @@ a {
 }
 
 .why-flok-visual {
-    display: flex;
-    justify-content: center;
     align-items: center;
     flex: 0 0 50%;
-    justify-content: flex-end;
 }
 
 .why-flok-image-placeholder {
